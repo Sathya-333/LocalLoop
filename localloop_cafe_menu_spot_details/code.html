@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Chai &amp; Code Cafe - Detail &amp; Menu</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#790d16",
+            "light-surface-container": "#ECE4D2",
+            "secondary-fixed-dim": "#d6c5a1",
+            "outline": "#8b716f",
+            "dark-surface-wine": "#261D1F",
+            "tertiary-fixed": "#cfe6f6",
+            "tertiary-container": "#293e4b",
+            "surface-container-low": "#f9f3e5",
+            "on-primary": "#ffffff",
+            "surface-dim": "#dfdacc",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1d1c13",
+            "on-tertiary-container": "#93a9b8",
+            "surface-container-high": "#eee8da",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f3eddf",
+            "dark-text-muted": "#C7BCA7",
+            "on-secondary-fixed": "#231a04",
+            "surface": "#fff9eb",
+            "on-primary-fixed-variant": "#891b20",
+            "on-tertiary-fixed": "#071e2a",
+            "surface-tint": "#aa3435",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#706346",
+            "primary-fixed-dim": "#ffb3af",
+            "on-surface-variant": "#584140",
+            "dark-surface-elevated": "#34282B",
+            "surface-bright": "#fff9eb",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#51452a",
+            "error": "#ba1a1a",
+            "secondary-container": "#f3e1bc",
+            "inverse-surface": "#333027",
+            "light-text-muted": "#695D56",
+            "on-tertiary-fixed-variant": "#354957",
+            "dark-border-cream": "#E5D3AF",
+            "surface-variant": "#e8e2d4",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "secondary": "#6a5d40",
+            "on-surface": "#1d1c13",
+            "primary-fixed": "#ffdad7",
+            "background": "#fff9eb",
+            "tertiary-fixed-dim": "#b3c9da",
+            "dark-bg-charcoal": "#1A1415",
+            "tertiary": "#132834",
+            "outline-variant": "#dfbfbd",
+            "on-primary-fixed": "#410005",
+            "dark-text-main": "#F5EFE1",
+            "inverse-on-surface": "#f6f0e2",
+            "secondary-fixed": "#f3e1bc",
+            "on-primary-container": "#ff7f7b",
+            "primary": "#540008",
+            "light-text-main": "#231B1C",
+            "inverse-primary": "#ffb3af",
+            "surface-container-highest": "#e8e2d4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xxs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "margin-tablet": "2rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.5rem",
+            "space-2xl": "3rem",
+            "margin-desktop": "3rem",
+            "space-xl": "2rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface text-light-text-main dark:bg-dark-bg-charcoal dark:text-dark-text-main transition-colors duration-200 antialiased font-body-md text-body-md selection:bg-tertiary-fixed-dim selection:text-tertiary">
+<!-- Top App Bar (Task Contextual Header) -->
+<header class="fixed top-0 left-0 w-full z-40 bg-surface/95 dark:bg-dark-surface-wine/95 backdrop-blur-md shadow-sm dark:shadow-none transition-colors">
+<div class="max-w-[1280px] mx-auto h-14 px-margin md:px-margin-tablet flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Go back" class="w-10 h-10 rounded-lg flex items-center justify-center text-primary-container dark:text-inverse-primary hover:bg-surface-container dark:hover:bg-dark-surface-elevated active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex items-center gap-1.5 text-on-surface-variant dark:text-dark-text-muted">
+<span class="material-symbols-outlined text-primary-container dark:text-inverse-primary" data-icon="location_on" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-md text-label-md tracking-tight font-semibold text-light-text-main dark:text-dark-text-main truncate max-w-[180px] sm:max-w-none">Opp. BMSIT Main Gate, Avalahalli</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<!-- Bookmark Icon -->
+<button aria-label="Save cafe" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant dark:text-dark-text-muted hover:bg-surface-container dark:hover:bg-dark-surface-elevated active:scale-95 transition-all" id="bookmarkBtn" type="button">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+<!-- Share Icon -->
+<button aria-label="Share cafe" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant dark:text-dark-text-muted hover:bg-surface-container dark:hover:bg-dark-surface-elevated active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<!-- Dark Mode Toggle Button -->
+<button aria-label="Toggle theme" class="w-10 h-10 rounded-lg flex items-center justify-center bg-secondary-fixed/40 dark:bg-dark-surface-elevated text-primary-container dark:text-tertiary-fixed-dim hover:bg-secondary-fixed active:scale-95 transition-all border border-dark-border-cream/20" id="themeToggle" type="button">
+<span class="material-symbols-outlined dark:hidden" data-icon="dark_mode">dark_mode</span>
+<span class="material-symbols-outlined hidden dark:block" data-icon="light_mode">light_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-14 pb-32 max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop space-y-space-lg">
+<!-- Hero Photo Banner with Badges -->
+<section class="mt-space-md relative rounded-xl overflow-hidden shadow-sm border border-primary-container/10 dark:border-dark-border-cream/20 bg-dark-surface-wine group">
+<div class="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An inviting, warmly lit community cafe interior near a college campus, featuring warm sandstone walls, rich mahogany wooden desks, soft amber Edison pendant lights, student laptop workstations, cozy booths, and steam rising from freshly brewed chai in clay kulhads under soft afternoon natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA09flB46-tkQygGBRh0vZWmir5Wv8_rB8dlCiPXjRFCBZjzS8i8lVW1vrK_9C0y0Q85K9bp4-fZh4659CdSq-o2d4NB5mZP3LQwVzo5lsRSGFVSV_6NOy5TxE90dIqTH91TW1r2a9E2CTp5AfbimAewNwM4H9dLYYC73kw3jXtqtp2EX1_SjyI2yFfFocqkwvEzC9Rn2oUP2aqIBlkGXLiRHY3RX9muPyJLu-q98hKMZ-CCIYZx7f9BQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-dark-bg-charcoal/90 via-dark-bg-charcoal/30 to-transparent"></div>
+</div>
+<!-- Badges Overlaid on Hero -->
+<div class="absolute top-space-md left-space-md right-space-md flex flex-wrap gap-space-xs justify-between items-start pointer-events-none">
+<div class="flex flex-wrap gap-space-xs pointer-events-auto">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 dark:bg-dark-surface-wine/90 backdrop-blur-md text-primary-container dark:text-inverse-primary border border-primary-container/20 dark:border-dark-border-cream/30 font-label-md text-label-md font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            Open Now until 11:00 PM
+          </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-lowest/90 dark:bg-dark-surface-wine/90 backdrop-blur-md text-light-text-main dark:text-dark-text-main border border-light-surface-container dark:border-dark-border-cream/20 font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-tertiary-container dark:text-tertiary-fixed-dim" data-icon="near_me">near_me</span>
+            150m from BMSIT Main Gate
+          </span>
+</div>
+<div class="pointer-events-auto">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-surface-container-lowest font-label-md text-label-md font-bold shadow-md">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Trust Score: 94/100
+          </span>
+</div>
+</div>
+<!-- Hero Bottom Tagline Overlay -->
+<div class="absolute bottom-space-md left-space-md right-space-md text-surface-container-lowest flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="inline-block px-2.5 py-0.5 rounded bg-tertiary-container/80 text-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-1">Student Haven &amp; Study Hub</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-container-lowest drop-shadow-sm">Avalahalli's Favorite Workspace</h2>
+</div>
+<div class="flex items-center gap-1 text-secondary-fixed text-label-md font-label-md bg-dark-bg-charcoal/60 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-surface-container-lowest">4.8</span>
+<span class="text-surface-dim">(640+ student reviews)</span>
+</div>
+</div>
+</section>
+<!-- Cafe Info Section & Action Hub -->
+<section class="bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md md:p-space-lg border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm transition-colors">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-light-text-main dark:text-dark-text-main font-bold tracking-tight">The Chai &amp; Code Cafe</h1>
+<span class="material-symbols-outlined text-primary-container dark:text-inverse-primary" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;" title="Verified Campus Merchant">verified</span>
+</div>
+<p class="font-body-md text-body-md text-light-text-muted dark:text-dark-text-muted mt-1 max-w-2xl">
+            A warm neighborhood sanctuary tailored for coders, BMSIT engineers, and chai lovers. Quiet corners, fast power sockets, and authentic kulhad brews.
+          </p>
+</div>
+<!-- Quick Action Row -->
+<div class="flex items-center gap-space-xs sm:gap-space-sm flex-wrap">
+<a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main border border-light-surface-container dark:border-dark-border-cream/30 font-label-lg text-label-lg hover:bg-surface-container-high transition-all active:scale-95 shadow-sm" href="#directions">
+<span class="material-symbols-outlined text-primary-container dark:text-inverse-primary" data-icon="directions">directions</span>
+            Directions
+          </a>
+<a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main border border-light-surface-container dark:border-dark-border-cream/30 font-label-lg text-label-lg hover:bg-surface-container-high transition-all active:scale-95 shadow-sm" href="tel:+918028461111">
+<span class="material-symbols-outlined text-primary-container dark:text-inverse-primary" data-icon="call">call</span>
+            Call Cafe
+          </a>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary-container text-surface-container-lowest font-label-lg text-label-lg hover:bg-primary transition-all active:scale-95 shadow-md" type="button">
+<span class="material-symbols-outlined" data-icon="table_restaurant">table_restaurant</span>
+            Order to Table
+          </button>
+</div>
+</div>
+<!-- Amenities Chips -->
+<div class="mt-space-md pt-space-md border-t border-light-surface-container dark:border-dark-border-cream/15">
+<div class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted uppercase tracking-wider mb-2 font-semibold">Campus &amp; Co-work Perks</div>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main border border-light-surface-container dark:border-dark-border-cream/30 font-label-md text-label-md font-medium">
+<span>⚡</span> 150 Mbps Wi-Fi
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main border border-light-surface-container dark:border-dark-border-cream/30 font-label-md text-label-md font-medium">
+<span>🔌</span> Plugs at Every Table
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container dark:bg-tertiary-container text-on-secondary-fixed dark:text-tertiary-fixed border border-secondary-fixed-dim/50 dark:border-tertiary-fixed-dim/30 font-label-md text-label-md font-bold">
+<span>🎓</span> 15% BMSIT ID Off
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main border border-light-surface-container dark:border-dark-border-cream/30 font-label-md text-label-md font-medium">
+<span>☕</span> Special Filter Coffee
+          </span>
+</div>
+</div>
+</section>
+<!-- Digital Food & Drink Menu Section -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-light-text-main dark:text-dark-text-main font-bold">Digital Food &amp; Drink Menu</h2>
+<p class="font-body-sm text-body-sm text-light-text-muted dark:text-dark-text-muted">Freshly prepared, student-friendly portions and curated brews</p>
+</div>
+<div class="inline-flex items-center gap-1 text-label-sm font-label-sm text-on-surface-variant dark:text-dark-text-muted bg-surface-container dark:bg-dark-surface-wine px-3 py-1.5 rounded-lg border border-light-surface-container dark:border-dark-border-cream/20">
+<span class="material-symbols-outlined text-emerald-700" data-icon="eco">eco</span>
+          Pure Veg &amp; Egg Options clearly marked
+        </div>
+</div>
+<!-- Menu Category Tabs -->
+<div class="sticky top-14 z-30 bg-surface/95 dark:bg-dark-bg-charcoal/95 backdrop-blur-sm py-2 -mx-margin px-margin md:-mx-margin-tablet md:px-margin-tablet border-y border-light-surface-container dark:border-dark-border-cream/15">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="menu-tab px-4 py-2 rounded-full font-label-md text-label-md font-bold whitespace-nowrap bg-primary-container text-surface-container-lowest shadow-sm active:scale-95 transition-all" type="button">
+            BMSIT Student Specials
+          </button>
+<button class="menu-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium whitespace-nowrap bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main hover:bg-surface-container-high transition-all active:scale-95 border border-light-surface-container dark:border-dark-border-cream/25" type="button">
+            Chai &amp; Brews
+          </button>
+<button class="menu-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium whitespace-nowrap bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main hover:bg-surface-container-high transition-all active:scale-95 border border-light-surface-container dark:border-dark-border-cream/25" type="button">
+            Quick Bites &amp; Maggi
+          </button>
+<button class="menu-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium whitespace-nowrap bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main hover:bg-surface-container-high transition-all active:scale-95 border border-light-surface-container dark:border-dark-border-cream/25" type="button">
+            Desserts
+          </button>
+</div>
+</div>
+<!-- Menu Items Bento / Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-md">
+<!-- Item 1: BMSIT Exam Fuel Combo (Featured Card - 12 cols desktop) -->
+<article class="lg:col-span-12 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md sm:p-space-lg border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm hover:shadow-md transition-all relative overflow-hidden flex flex-col md:flex-row gap-space-md items-center">
+<div class="absolute top-0 right-0 bg-primary-container text-surface-container-lowest font-label-sm text-label-sm px-3 py-1 rounded-bl-lg font-bold tracking-wide uppercase">
+            Top Student Pick
+          </div>
+<div class="w-full md:w-56 h-48 md:h-44 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A delectable Indian student cafe combo platter featuring a hot glass of authentic Irani chai with dense foam, a buttery sliced toasted bun maska, and a basket of golden crispy potato french fries arranged on a rustic wooden table under gentle daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqweFy7rDEqx1VhJfImSELvZlO68uAnyhYw6epqPO15CQXfiIeWjB8Pdlzo_zofirjnoO6HjgI4_8NOekUpnKxeOEyJsgJQqaroHVlCe4K9G-DVAAtPIGng4m1H2piBtlMDpnopqSKOsOcRhG-6OxYAs5oz7R2QOIctIU25AlFHjR8e5kr9qWGb8j0pP-tvb7azuqETOfPp4_IUTz_LiYRDLfcwocJ_M5qMaz21B4JHZjfx0Tmtpb4Og"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-dark-bg-charcoal/80 text-surface-container-lowest font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Veg
+            </span>
+</div>
+<div class="flex-1 flex flex-col justify-between w-full">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-light-text-main dark:text-dark-text-main">BMSIT Exam Fuel Combo</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">21% OFF</span>
+</div>
+<p class="font-body-md text-body-md text-light-text-muted dark:text-dark-text-muted line-clamp-2">
+                Irani Chai + Bun Maska + Fries. The ultimate late-night submission and semester exam energizer designed for students.
+              </p>
+</div>
+<div class="mt-4 flex items-center justify-between pt-3 border-t border-light-surface-container/60 dark:border-dark-border-cream/10">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-extrabold text-primary-container dark:text-inverse-primary">₹119</span>
+<span class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted line-through">₹150</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="add-to-cart px-4 py-2 rounded-lg bg-primary-container text-surface-container-lowest font-label-md text-label-md font-bold hover:bg-primary active:scale-95 transition-all flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>Add to Order</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Item 2: Adrak Cardamom Kulhad Chai (6 cols) -->
+<article class="lg:col-span-6 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-space-md">
+<div class="w-28 h-28 sm:w-32 sm:h-32 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Steaming hot Indian spiced chai poured into an authentic terracotta earthen kulhad cup, garnished with crushed cardamom pods and crushed fresh ginger roots on a sandstone cafe table under warm ambient cafe lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDrYVzdX0LvadKflKe2WpONoIY35Mx0wWp6RgYTRai9nhwEEXWf73ue3XoG9RJsXWLYp6Kmd_cYLWLyHQTXMar1QoUKhc1JY572FPww-qmBoNkvxK7qbY8NgaS7BTFxvwIXdmB4AEb0sR_UzdXEFBn8-EdqvN3N7LByWZe4yIUeZgtonmOmnPmL7mhiYqKVcjI0D3v61GhPicF-49ow6dHPljbv-jikDl98-BBR6b5NvahIOVxZWvjzA"/>
+<span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-dark-bg-charcoal/80 text-surface-container-lowest font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+              </span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-md text-title-md font-bold text-light-text-main dark:text-dark-text-main">Adrak Cardamom Kulhad Chai</h3>
+<p class="font-body-sm text-body-sm text-light-text-muted dark:text-dark-text-muted mt-1">
+                Freshly brewed clay cup chai with stone-crushed ginger and fragrant Idukki green cardamom.
+              </p>
+<span class="inline-block mt-2 px-2 py-0.5 rounded bg-surface-container dark:bg-dark-surface-elevated text-on-surface-variant dark:text-dark-text-muted font-label-sm text-label-sm">
+                Authentic Clay Cup
+              </span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-light-surface-container dark:border-dark-border-cream/10 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-light-text-main dark:text-dark-text-main">₹30</span>
+<button class="add-to-cart px-3.5 py-1.5 rounded-lg border-1.5 border-primary-container text-primary-container dark:text-inverse-primary dark:border-inverse-primary font-label-md text-label-md font-semibold hover:bg-primary-container hover:text-surface-container-lowest active:scale-95 transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+              Add
+            </button>
+</div>
+</article>
+<!-- Item 3: Cheese Chilli Garlic Toast (6 cols) -->
+<article class="lg:col-span-6 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-space-md">
+<div class="w-28 h-28 sm:w-32 sm:h-32 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Golden crisp artisan sourdough toast covered in melted bubbly mozzarella cheese, finely chopped spicy green bird's eye chillies, toasted garlic butter, and sprinkled fresh herbs served on a ceramic plate in a cafe interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoarljJims32Z3t5RCnx_hgZrtUH95W8jZLlyXEj8QC-rAvUHN_n9YhRMQWVX_IrnzhYu6gJ6dIJvlJP8Gl-Yqyc5C9jfhH9k15wft2yGVomiVZkQRTn5NRIhVl5LK65AqKlM6CqOH4QKCMK0kzR3vBNGhpKybDsHTJtwqfF_nmw_L4kKQOH03PMmSDhJHm62tG1-J7wRW4sLpu0IbomniNAwEmTQkdwZknPJunMAIFqc6-jadBJYv5Q"/>
+<span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-dark-bg-charcoal/80 text-surface-container-lowest font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+              </span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-md text-title-md font-bold text-light-text-main dark:text-dark-text-main">Cheese Chilli Garlic Toast</h3>
+<p class="font-body-sm text-body-sm text-light-text-muted dark:text-dark-text-muted mt-1">
+                Melted mozzarella, punchy green chillies, and roasted garlic herb butter on crisp toast.
+              </p>
+<span class="inline-block mt-2 px-2 py-0.5 rounded bg-surface-container dark:bg-dark-surface-elevated text-on-surface-variant dark:text-dark-text-muted font-label-sm text-label-sm">
+                Chef's Special
+              </span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-light-surface-container dark:border-dark-border-cream/10 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-light-text-main dark:text-dark-text-main">₹85</span>
+<button class="add-to-cart px-3.5 py-1.5 rounded-lg border-1.5 border-primary-container text-primary-container dark:text-inverse-primary dark:border-inverse-primary font-label-md text-label-md font-semibold hover:bg-primary-container hover:text-surface-container-lowest active:scale-95 transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+              Add
+            </button>
+</div>
+</article>
+<!-- Item 4: Schezwan Tadka Maggi (6 cols) -->
+<article class="lg:col-span-6 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-space-md">
+<div class="w-28 h-28 sm:w-32 sm:h-32 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A hot bowl of aromatic Indian street style spicy Schezwan noodles tossed with sautéed bell peppers, sweet corn kernels, spring onions, and vibrant red chili masala garnished with fresh coriander in a cozy cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpJ_KIzAEMHtcqwkQAEx9mHDUTo2rfT-0xehvrCM-257H3zN1vEfLUe8Y_xyYsSNu9a4-yGRJmxxJPjlRgkBeen5vsYkUZegXaMOPwYTx0S0WyU0a1reU5TDZeOjxGzjZRibQ-sRKCmdhwzSdb5Dekgac9TezswYp0yjIVkv1hpiz8dwyXwuVU2mmEVda1A4nS7D3lwPUK6tYZYncwNu354nMDpBlBnAtAnlfXgVdoiCHplOxiOSDHg"/>
+<span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-dark-bg-charcoal/80 text-surface-container-lowest font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+              </span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-md text-title-md font-bold text-light-text-main dark:text-dark-text-main">Schezwan Tadka Maggi</h3>
+<p class="font-body-sm text-body-sm text-light-text-muted dark:text-dark-text-muted mt-1">
+                Double masala, spicy street style fiery wok toss with crunchy onions and bell peppers.
+              </p>
+<span class="inline-block mt-2 px-2 py-0.5 rounded bg-surface-container dark:bg-dark-surface-elevated text-on-surface-variant dark:text-dark-text-muted font-label-sm text-label-sm">
+                Extra Spicy 🌶️
+              </span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-light-surface-container dark:border-dark-border-cream/10 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-light-text-main dark:text-dark-text-main">₹65</span>
+<button class="add-to-cart px-3.5 py-1.5 rounded-lg border-1.5 border-primary-container text-primary-container dark:text-inverse-primary dark:border-inverse-primary font-label-md text-label-md font-semibold hover:bg-primary-container hover:text-surface-container-lowest active:scale-95 transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+              Add
+            </button>
+</div>
+</article>
+<!-- Item 5: Cold Brew Hazelnut Latte (6 cols) -->
+<article class="lg:col-span-6 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex gap-space-md">
+<div class="w-28 h-28 sm:w-32 sm:h-32 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="An iced artisan glass filled with chilled dark cold brew coffee layered with velvety condensed oat milk, swirls of roasted hazelnut syrup, and clean crystalline ice cubes shot from eye-level in warm afternoon sunshine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5MqIimUUCNJ_r871xeHmf0xpZNDONZiwoIPh3znFopoFwiw5fZ9-QnKIBh7vvMO3aCyBpklElUzrhRBJGIpfIBbQN_iX6YQ8Pt0CXPoWvY0yfOmwzp5K1H0rY_B5HEw2RpHH-6X4s-WrgQ_xjjTO_9vEfCyCadSmWE5PqD5NAXGENIRQXgqo3rulLnttIhBpFAgJuYw0N3Sg5srOG03lFgs6rA6BRgrBOErOYGejDAcEdClKy_yeFzg"/>
+<span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-dark-bg-charcoal/80 text-surface-container-lowest font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Veg
+              </span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-md text-title-md font-bold text-light-text-main dark:text-dark-text-main">Cold Brew Hazelnut Latte</h3>
+<p class="font-body-sm text-body-sm text-light-text-muted dark:text-dark-text-muted mt-1">
+                Slow steeped for 16 hours from Chikmagalur Arabica beans, blended with toasted hazelnut.
+              </p>
+<span class="inline-block mt-2 px-2 py-0.5 rounded bg-surface-container dark:bg-dark-surface-elevated text-on-surface-variant dark:text-dark-text-muted font-label-sm text-label-sm">
+                Barista Pick
+              </span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-light-surface-container dark:border-dark-border-cream/10 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-light-text-main dark:text-dark-text-main">₹110</span>
+<button class="add-to-cart px-3.5 py-1.5 rounded-lg border-1.5 border-primary-container text-primary-container dark:text-inverse-primary dark:border-inverse-primary font-label-md text-label-md font-semibold hover:bg-primary-container hover:text-surface-container-lowest active:scale-95 transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+              Add
+            </button>
+</div>
+</article>
+</div>
+</section>
+<!-- Student Community Note Banner -->
+<section class="rounded-xl p-space-md bg-secondary-container/50 dark:bg-dark-surface-wine border border-secondary-fixed-dim/40 dark:border-dark-border-cream/20 flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined" data-icon="local_cafe">local_cafe</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm font-bold text-on-secondary-fixed dark:text-dark-text-main">Studying late for internal assessments?</h4>
+<p class="font-body-sm text-body-sm text-on-secondary-container dark:text-dark-text-muted">Show your BMSIT College ID Card during bill clearance to get your 15% student discount automatically applied!</p>
+</div>
+</div>
+<span class="shrink-0 font-label-md text-label-md text-primary-container dark:text-inverse-primary font-bold">Valid Mon–Sun</span>
+</section>
+</main>
+<!-- Sticky Order Footer Bar (Task-focused floating checkout dock) -->
+<aside class="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest/95 dark:bg-dark-surface-wine/95 backdrop-blur-md border-t border-light-surface-container dark:border-dark-border-cream/20 shadow-lg">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-3 flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container dark:bg-dark-surface-elevated flex items-center justify-center text-primary-container dark:text-inverse-primary">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold px-2 py-0.5 rounded bg-surface-container-high dark:bg-dark-surface-elevated text-primary-container dark:text-inverse-primary">Table 4</span>
+<span class="text-on-surface-variant dark:text-dark-text-muted text-body-sm font-body-sm">• 2 items selected</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-light-text-main dark:text-dark-text-main leading-tight mt-0.5">
+            ₹149
+            <span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted font-normal">incl. taxes</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs sm:gap-space-sm">
+<button aria-label="View tray items" class="hidden sm:inline-flex px-3.5 py-2.5 rounded-lg border border-light-surface-container dark:border-dark-border-cream/30 text-light-text-main dark:text-dark-text-main font-label-md text-label-md hover:bg-surface-container transition-all" type="button">
+          View Tray
+        </button>
+<button class="px-6 py-2.5 rounded-lg bg-primary-container hover:bg-primary text-surface-container-lowest font-label-lg text-label-lg font-bold shadow-md active:scale-95 transition-transform flex items-center gap-2" type="button">
+<span>Place Order</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Interactive Logic for Theme & Cart Micro-interactions -->
+<script>
+    // Theme toggle handling
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Bookmark Toggle
+    const bookmarkBtn = document.getElementById('bookmarkBtn');
+    let isBookmarked = false;
+    bookmarkBtn.addEventListener('click', () => {
+      isBookmarked = !isBookmarked;
+      const icon = bookmarkBtn.querySelector('.material-symbols-outlined');
+      if (isBookmarked) {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        bookmarkBtn.classList.add('text-primary-container');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        bookmarkBtn.classList.remove('text-primary-container');
+      }
+    });
+
+    // Menu category pill switcher
+    const tabs = document.querySelectorAll('.menu-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.className = 'menu-tab px-4 py-2 rounded-full font-label-md text-label-md font-medium whitespace-nowrap bg-surface-container dark:bg-dark-surface-elevated text-light-text-main dark:text-dark-text-main hover:bg-surface-container-high transition-all active:scale-95 border border-light-surface-container dark:border-dark-border-cream/25';
+        });
+        tab.className = 'menu-tab px-4 py-2 rounded-full font-label-md text-label-md font-bold whitespace-nowrap bg-primary-container text-surface-container-lowest shadow-sm active:scale-95 transition-all';
+      });
+    });
+
+    // Add to cart click feedback
+    const addButtons = document.querySelectorAll('.add-to-cart');
+    addButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const originalContent = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-sm">check</span> Added';
+        setTimeout(() => {
+          this.innerHTML = originalContent;
+        }, 1200);
+      });
+    });
+  </script>
+</body></html>

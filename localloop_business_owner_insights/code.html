@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Chai &amp; Code Cafe - Merchant Analytics | LocalLoop</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#790d16",
+            "light-surface-container": "#ECE4D2",
+            "secondary-fixed-dim": "#d6c5a1",
+            "outline": "#8b716f",
+            "dark-surface-wine": "#261D1F",
+            "tertiary-fixed": "#cfe6f6",
+            "tertiary-container": "#293e4b",
+            "surface-container-low": "#f9f3e5",
+            "on-primary": "#ffffff",
+            "surface-dim": "#dfdacc",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1d1c13",
+            "on-tertiary-container": "#93a9b8",
+            "surface-container-high": "#eee8da",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f3eddf",
+            "dark-text-muted": "#C7BCA7",
+            "on-secondary-fixed": "#231a04",
+            "surface": "#fff9eb",
+            "on-primary-fixed-variant": "#891b20",
+            "on-tertiary-fixed": "#071e2a",
+            "surface-tint": "#aa3435",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#706346",
+            "primary-fixed-dim": "#ffb3af",
+            "on-surface-variant": "#584140",
+            "dark-surface-elevated": "#34282B",
+            "surface-bright": "#fff9eb",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#51452a",
+            "error": "#ba1a1a",
+            "secondary-container": "#f3e1bc",
+            "inverse-surface": "#333027",
+            "light-text-muted": "#695D56",
+            "on-tertiary-fixed-variant": "#354957",
+            "dark-border-cream": "#E5D3AF",
+            "surface-variant": "#e8e2d4",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "secondary": "#6a5d40",
+            "on-surface": "#1d1c13",
+            "primary-fixed": "#ffdad7",
+            "background": "#fff9eb",
+            "tertiary-fixed-dim": "#b3c9da",
+            "dark-bg-charcoal": "#1A1415",
+            "tertiary": "#132834",
+            "outline-variant": "#dfbfbd",
+            "on-primary-fixed": "#410005",
+            "dark-text-main": "#F5EFE1",
+            "inverse-on-surface": "#f6f0e2",
+            "secondary-fixed": "#f3e1bc",
+            "on-primary-container": "#ff7f7b",
+            "primary": "#540008",
+            "light-text-main": "#231B1C",
+            "inverse-primary": "#ffb3af",
+            "surface-container-highest": "#e8e2d4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xxs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "margin-tablet": "2rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.5rem",
+            "space-2xl": "3rem",
+            "margin-desktop": "3rem",
+            "space-xl": "2rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface text-on-surface dark:bg-dark-bg-charcoal dark:text-dark-text-main transition-colors duration-200 antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- Merchant Mode Banner -->
+<header class="bg-primary-container text-surface-container-lowest text-label-sm font-label-sm py-1 px-4 flex justify-between items-center z-50">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span>LocalLoop Merchant Hub • Live GPS Sync Active</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="opacity-90">BMSIT Campus Partner ID: #BLR-8492</span>
+<span class="text-tertiary-fixed-dim">Verified Business</span>
+</div>
+</header>
+<!-- Top Navigation Shell (Shared Components: TopAppBar) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin h-14 bg-surface dark:bg-inverse-surface shadow-sm dark:shadow-none mt-7">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="location_on">location_on</span>
+<h1 class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface truncate">Indiranagar, Bengaluru</h1>
+</div>
+<!-- Center: Cafe Switcher (Desktop and Tablet) -->
+<div class="hidden md:flex items-center space-x-3 bg-surface-container-low dark:bg-dark-surface-wine px-3 py-1.5 rounded-lg border border-outline-variant/30">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+<div class="flex flex-col text-left">
+<span class="text-label-md font-label-md font-bold text-primary dark:text-inverse-primary">The Chai &amp; Code Cafe</span>
+<span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Avalahalli (Opp. BMSIT Main Gate)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant dark:text-dark-text-muted ml-1" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<!-- Trailing Action: EN | KN & Theme Toggle -->
+<div class="flex items-center space-x-3">
+<button class="text-label-md font-label-md text-primary dark:text-inverse-primary font-bold px-2 py-1 rounded hover:bg-surface-container dark:hover:bg-dark-surface-wine transition-colors">
+        EN | KN
+      </button>
+<!-- Dark Mode Toggle Button -->
+<button class="p-2 rounded-full bg-surface-container-high dark:bg-dark-surface-wine text-primary dark:text-tertiary-fixed-dim hover:scale-105 active:scale-95 transition-transform" id="theme-toggle" title="Toggle color scheme">
+<span class="material-symbols-outlined text-title-sm font-title-sm" data-icon="light_mode" id="theme-icon">light_mode</span>
+</button>
+<!-- Merchant Actions Quick Access -->
+<button class="hidden lg:flex items-center space-x-1.5 bg-primary-container text-surface-container-lowest px-3 py-1.5 rounded-lg text-label-md font-label-md hover:bg-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span>Download GST Report</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas (Padding top accounts for stacked header + app bar) -->
+<main class="flex-grow pt-28 pb-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto w-full space-y-6">
+<!-- Mobile Cafe Switcher (Displayed below nav on small viewports) -->
+<div class="md:hidden flex items-center justify-between bg-surface-container-low dark:bg-dark-surface-wine p-3 rounded-xl border border-outline-variant/30 shadow-sm">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center font-bold text-label-lg font-label-lg">
+          CC
+        </div>
+<div>
+<h2 class="text-title-sm font-title-sm text-light-text-main dark:text-dark-text-main font-bold">The Chai &amp; Code Cafe - Avalahalli</h2>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Direct Campus Feed • Open Now</p>
+</div>
+</div>
+<button class="p-1 rounded text-primary dark:text-inverse-primary hover:bg-surface-container">
+<span class="material-symbols-outlined" data-icon="unfold_more">unfold_more</span>
+</button>
+</div>
+<!-- Dashboard Header: Title + Time Filter Selector -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-light-surface-container dark:border-dark-border-cream/20 pb-4">
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-headline-md font-headline-md text-primary dark:text-inverse-primary font-bold">Merchant Hub Analytics</h2>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed">Live Spot Tracker</span>
+</div>
+<p class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted mt-0.5">Real-time local engagement, BMSIT campus interactions &amp; walk-in performance.</p>
+</div>
+<!-- Time Range Selector -->
+<div class="flex items-center space-x-1 p-1 bg-surface-container-high dark:bg-dark-surface-elevated rounded-lg self-start md:self-auto border border-outline-variant/20">
+<button class="px-3 py-1.5 rounded text-label-md font-label-md transition-colors text-on-surface-variant dark:text-dark-text-muted hover:text-light-text-main">Today</button>
+<button class="px-3.5 py-1.5 rounded text-label-md font-label-md font-bold bg-primary-container text-surface-container-lowest shadow-sm">Last 7 Days</button>
+<button class="px-3 py-1.5 rounded text-label-md font-label-md transition-colors text-on-surface-variant dark:text-dark-text-muted hover:text-light-text-main">This Month</button>
+</div>
+</div>
+<!-- Quick Merchant Action Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<button class="flex items-center justify-between p-3.5 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl border border-light-surface-container dark:border-dark-border-cream/20 hover:border-primary-container dark:hover:border-tertiary-fixed-dim transition-all shadow-sm group">
+<div class="flex items-center space-x-3">
+<span class="w-10 h-10 rounded-lg bg-surface-container dark:bg-dark-surface-elevated flex items-center justify-center text-primary dark:text-inverse-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+</span>
+<div class="text-left">
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">Post Today's Special</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Broadcast to BMSIT feed</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-light-text-muted group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="flex items-center justify-between p-3.5 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl border border-light-surface-container dark:border-dark-border-cream/20 hover:border-primary-container dark:hover:border-tertiary-fixed-dim transition-all shadow-sm group">
+<div class="flex items-center space-x-3">
+<span class="w-10 h-10 rounded-lg bg-surface-container dark:bg-dark-surface-elevated flex items-center justify-center text-primary dark:text-inverse-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="table_restaurant">table_restaurant</span>
+</span>
+<div class="text-left">
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">View Table Orders</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">8 live orders in kitchen</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-light-text-muted group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="flex items-center justify-between p-3.5 bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl border border-light-surface-container dark:border-dark-border-cream/20 hover:border-primary-container dark:hover:border-tertiary-fixed-dim transition-all shadow-sm group">
+<div class="flex items-center space-x-3">
+<span class="w-10 h-10 rounded-lg bg-surface-container dark:bg-dark-surface-elevated flex items-center justify-center text-primary dark:text-inverse-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="file_download">file_download</span>
+</span>
+<div class="text-left">
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">Download GST Report</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Monthly tax breakdown</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-light-text-muted group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- 4 Key Analytics Metric Cards Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Metric 1: Impressions -->
+<div class="bg-surface-container-lowest dark:bg-dark-surface-wine p-5 rounded-2xl border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="text-label-md font-label-md text-light-text-muted dark:text-dark-text-muted">Total Spot Impressions &amp; Views</span>
+<span class="p-2 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-primary dark:text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="text-headline-lg font-headline-lg font-extrabold text-light-text-main dark:text-dark-text-main">8,420</div>
+<p class="text-label-sm font-label-sm text-primary dark:text-tertiary-fixed-dim font-bold flex items-center mt-1">
+<span class="material-symbols-outlined text-label-md font-label-md mr-0.5" data-icon="trending_up">trending_up</span>
+            +24% from BMSIT students
+          </p>
+</div>
+<div class="w-full bg-light-surface-container dark:bg-dark-surface-elevated h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Metric 2: Physical Footfall -->
+<div class="bg-surface-container-lowest dark:bg-dark-surface-wine p-5 rounded-2xl border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="text-label-md font-label-md text-light-text-muted dark:text-dark-text-muted">Physical Footfall &amp; Direction Taps</span>
+<span class="p-2 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-primary dark:text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="directions_walk">directions_walk</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="text-headline-lg font-headline-lg font-extrabold text-light-text-main dark:text-dark-text-main">640</div>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted flex items-center mt-1">
+<span class="material-symbols-outlined text-label-md font-label-md mr-0.5 text-primary-container" data-icon="verified">verified</span>
+            GPS verified visits within 50m
+          </p>
+</div>
+<div class="w-full bg-light-surface-container dark:bg-dark-surface-elevated h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary-container dark:bg-tertiary-fixed h-full rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<!-- Metric 3: Menu & QR Scans -->
+<div class="bg-surface-container-lowest dark:bg-dark-surface-wine p-5 rounded-2xl border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="text-label-md font-label-md text-light-text-muted dark:text-dark-text-muted">Menu &amp; QR Scans</span>
+<span class="p-2 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-primary dark:text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="text-headline-lg font-headline-lg font-extrabold text-light-text-main dark:text-dark-text-main">312</div>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted flex items-center mt-1">
+<span class="material-symbols-outlined text-label-md font-label-md mr-0.5" data-icon="touch_app">touch_app</span>
+            table scans across 14 tables
+          </p>
+</div>
+<div class="w-full bg-light-surface-container dark:bg-dark-surface-elevated h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Metric 4: BMSIT Student Discount Claims -->
+<div class="bg-surface-container-lowest dark:bg-dark-surface-wine p-5 rounded-2xl border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm relative overflow-hidden flex flex-col justify-between border-l-4 border-l-primary-container">
+<div class="flex justify-between items-start">
+<span class="text-label-md font-label-md text-light-text-muted dark:text-dark-text-muted">BMSIT Student Discount Claims</span>
+<span class="p-2 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-primary dark:text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="loyalty">loyalty</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="text-headline-lg font-headline-lg font-extrabold text-primary dark:text-inverse-primary">184</div>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted flex items-center mt-1">
+<span class="material-symbols-outlined text-label-md font-label-md mr-0.5" data-icon="school">school</span>
+            redemptions validated via student ID
+          </p>
+</div>
+<div class="w-full bg-light-surface-container dark:bg-dark-surface-elevated h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+</div>
+<!-- Active Promotion & Campus Geofence Spotlight -->
+<div class="bg-gradient-to-br from-surface-container-lowest to-surface-container dark:from-dark-surface-wine dark:to-dark-surface-elevated rounded-2xl p-6 border border-light-surface-container dark:border-dark-border-cream/20 shadow-md">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6">
+<div class="space-y-3">
+<div class="flex items-center space-x-2">
+<span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold bg-primary-container text-surface-container-lowest flex items-center space-x-1">
+<span class="material-symbols-outlined text-label-md font-label-md" data-icon="bolt">bolt</span>
+<span>LIVE CAMPAIGN</span>
+</span>
+<span class="text-label-md font-label-md text-light-text-muted dark:text-dark-text-muted">LocalLoop Geo-Fencing Engine</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-light-text-main dark:text-dark-text-main">
+            Geo-Targeted Flash Promo: 15% BMSIT ID Off
+          </h3>
+<div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="radar">radar</span>
+<span>Radius: <strong class="text-light-text-main dark:text-dark-text-main">1.5 km circle around campus</strong></span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="cell_tower">cell_tower</span>
+<span>Reach: <strong class="text-light-text-main dark:text-dark-text-main">1,890 active devices</strong></span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="schedule">schedule</span>
+<span>Active during: <strong class="text-light-text-main dark:text-dark-text-main">12:00 PM – 9:00 PM</strong></span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="flex items-center space-x-3 self-start lg:self-center">
+<button class="bg-primary-container text-surface-container-lowest hover:bg-primary font-bold px-5 py-2.5 rounded-lg text-label-lg font-label-lg shadow-sm flex items-center space-x-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span>Boost Radius / Edit Offer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Analytics Deep Dive: Peak Hours & Demographics & Search Terms (Bento 3-Col layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Peak Hours & Visitor Distribution Chart (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest dark:bg-dark-surface-wine p-6 rounded-2xl border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div>
+<h3 class="text-title-md font-title-md font-bold text-light-text-main dark:text-dark-text-main">Visitor Demographics &amp; Peak Hours</h3>
+<p class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted">Hourly in-store physical density vs student release cycles</p>
+</div>
+<span class="p-2 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-primary dark:text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+</span>
+</div>
+<!-- Peak Alert Card -->
+<div class="p-3.5 bg-surface-container dark:bg-dark-surface-elevated rounded-xl border border-outline-variant/30 mt-3 flex items-start space-x-3">
+<span class="material-symbols-outlined text-primary-container dark:text-inverse-primary mt-0.5" data-icon="alarm">alarm</span>
+<div>
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">Peak student rush: 4:00 PM – 7:30 PM (After college hours)</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">High demand for filter coffee, cold brew, and quick bites right after BMSIT lab dismissals.</p>
+</div>
+</div>
+<!-- Stylized Bar Chart for Footfall -->
+<div class="mt-6">
+<div class="flex items-end justify-between h-44 pt-6 pb-2 px-2 border-b border-light-surface-container dark:border-dark-border-cream/20">
+<!-- 10 AM -->
+<div class="flex flex-col items-center flex-1 space-y-1">
+<span class="text-label-sm font-label-sm text-light-text-muted opacity-60">12</span>
+<div class="w-6 bg-secondary-fixed-dim/50 rounded-t h-8"></div>
+<span class="text-label-sm font-label-sm text-light-text-muted">10 AM</span>
+</div>
+<!-- 12 PM -->
+<div class="flex flex-col items-center flex-1 space-y-1">
+<span class="text-label-sm font-label-sm text-light-text-muted opacity-75">48</span>
+<div class="w-6 bg-secondary-fixed-dim rounded-t h-16"></div>
+<span class="text-label-sm font-label-sm text-light-text-muted">12 PM</span>
+</div>
+<!-- 2 PM -->
+<div class="flex flex-col items-center flex-1 space-y-1">
+<span class="text-label-sm font-label-sm text-light-text-muted opacity-75">62</span>
+<div class="w-6 bg-secondary-fixed-dim rounded-t h-20"></div>
+<span class="text-label-sm font-label-sm text-light-text-muted">2 PM</span>
+</div>
+<!-- 4 PM (Rush start) -->
+<div class="flex flex-col items-center flex-1 space-y-1">
+<span class="text-label-sm font-label-sm text-primary dark:text-inverse-primary font-bold">142</span>
+<div class="w-6 bg-primary-container rounded-t h-32 relative">
+<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-tertiary-fixed-dim"></div>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-primary dark:text-inverse-primary">4 PM</span>
+</div>
+<!-- 6 PM (Peak) -->
+<div class="flex flex-col items-center flex-1 space-y-1">
+<span class="text-label-sm font-label-sm text-primary dark:text-inverse-primary font-bold">198</span>
+<div class="w-6 bg-primary-container rounded-t h-40 relative">
+<span class="absolute -top-6 bg-primary-container text-surface-container-lowest text-[10px] px-1.5 py-0.5 rounded font-bold">MAX</span>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-primary dark:text-inverse-primary">6 PM</span>
+</div>
+<!-- 8 PM -->
+<div class="flex flex-col items-center flex-1 space-y-1">
+<span class="text-label-sm font-label-sm text-light-text-muted opacity-90">110</span>
+<div class="w-6 bg-primary-container/70 rounded-t h-28"></div>
+<span class="text-label-sm font-label-sm text-light-text-muted">8 PM</span>
+</div>
+<!-- 10 PM -->
+<div class="flex flex-col items-center flex-1 space-y-1">
+<span class="text-label-sm font-label-sm text-light-text-muted opacity-50">34</span>
+<div class="w-6 bg-secondary-fixed-dim/60 rounded-t h-12"></div>
+<span class="text-label-sm font-label-sm text-light-text-muted">10 PM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Audience Split Ratio -->
+<div class="mt-6 pt-4 border-t border-light-surface-container dark:border-dark-border-cream/20">
+<div class="flex justify-between items-center text-label-md font-label-md mb-2">
+<span class="font-bold text-light-text-main dark:text-dark-text-main">Audience breakdown:</span>
+<span class="text-light-text-muted dark:text-dark-text-muted">Based on verified identity checks</span>
+</div>
+<div class="w-full h-3 rounded-full overflow-hidden flex bg-surface-container">
+<div class="bg-primary-container h-full transition-all" style="width: 78%" title="78% BMSIT Students"></div>
+<div class="bg-tertiary-fixed-dim dark:bg-tertiary-container h-full transition-all" style="width: 22%" title="22% Avalahalli Residents"></div>
+</div>
+<div class="flex justify-between items-center mt-2.5 text-label-sm font-label-sm">
+<div class="flex items-center space-x-1.5">
+<span class="w-3 h-3 rounded-full bg-primary-container inline-block"></span>
+<span class="font-bold text-light-text-main dark:text-dark-text-main">78% BMSIT Students</span>
+<span class="text-light-text-muted dark:text-dark-text-muted">(Avg stay: 85 mins)</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim dark:bg-tertiary-container inline-block"></span>
+<span class="font-bold text-light-text-main dark:text-dark-text-main">22% Avalahalli Residents</span>
+<span class="text-light-text-muted dark:text-dark-text-muted">(Avg stay: 35 mins)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Discovery Keywords & Neighborhood Reach (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest dark:bg-dark-surface-wine p-6 rounded-2xl border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div>
+<h3 class="text-title-md font-title-md font-bold text-light-text-main dark:text-dark-text-main">Search Discovery Keywords</h3>
+<p class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted">Top search terms that led visitors to your cafe</p>
+</div>
+<span class="p-2 rounded-lg bg-surface-container dark:bg-dark-surface-elevated text-primary dark:text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</span>
+</div>
+<div class="space-y-3 mt-4">
+<!-- Term 1 -->
+<div class="p-3 bg-surface-container-low dark:bg-dark-surface-elevated rounded-xl border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<span class="w-8 h-8 rounded-full bg-surface-container dark:bg-dark-surface-wine flex items-center justify-center font-bold text-label-md font-label-md text-primary dark:text-inverse-primary">
+                  1
+                </span>
+<div>
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">"quiet cafe with wifi"</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">1,410 impressions • 62% CTR</p>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-surface-container dark:bg-dark-surface-wine text-primary dark:text-inverse-primary rounded-full text-label-sm font-label-sm font-bold">
+                #1 Match
+              </span>
+</div>
+<!-- Term 2 -->
+<div class="p-3 bg-surface-container-low dark:bg-dark-surface-elevated rounded-xl border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<span class="w-8 h-8 rounded-full bg-surface-container dark:bg-dark-surface-wine flex items-center justify-center font-bold text-label-md font-label-md text-primary dark:text-inverse-primary">
+                  2
+                </span>
+<div>
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">"budget maggi under ₹100"</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">980 impressions • 51% CTR</p>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-surface-container dark:bg-dark-surface-wine text-primary dark:text-inverse-primary rounded-full text-label-sm font-label-sm font-bold">
+                Trending
+              </span>
+</div>
+<!-- Term 3 -->
+<div class="p-3 bg-surface-container-low dark:bg-dark-surface-elevated rounded-xl border border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<span class="w-8 h-8 rounded-full bg-surface-container dark:bg-dark-surface-wine flex items-center justify-center font-bold text-label-md font-label-md text-primary dark:text-inverse-primary">
+                  3
+                </span>
+<div>
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">"charging points"</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">740 impressions • 44% CTR</p>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-surface-container dark:bg-dark-surface-wine text-primary dark:text-inverse-primary rounded-full text-label-sm font-label-sm font-bold">
+                High Intent
+              </span>
+</div>
+</div>
+</div>
+<!-- Campus Radius Footprint Indicator -->
+<div class="bg-surface-container dark:bg-dark-surface-elevated p-4 rounded-xl border border-outline-variant/20 space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md font-bold text-light-text-main dark:text-dark-text-main">Neighborhood Radius Saturation</span>
+<span class="text-label-sm font-label-sm text-primary dark:text-inverse-primary font-bold">Avalahalli - BMSIT Ring</span>
+</div>
+<div class="flex items-center space-x-2 text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">
+<span class="material-symbols-outlined text-primary-container" data-icon="fmd_good">fmd_good</span>
+<span>LocalLoop currently routes 1 in every 3 campus study groups to your cafe.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Customer Feedback & Spot Mentions Preview -->
+<div class="bg-surface-container-lowest dark:bg-dark-surface-wine p-6 rounded-2xl border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm">
+<div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 mb-4">
+<div>
+<h3 class="text-title-md font-title-md font-bold text-light-text-main dark:text-dark-text-main">Community Loop Buzz</h3>
+<p class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted">Recent student feed posts mentioning 'The Chai &amp; Code Cafe'</p>
+</div>
+<button class="text-label-md font-label-md font-bold text-primary dark:text-inverse-primary hover:underline self-start sm:self-auto flex items-center">
+<span>View All Campus Mentions</span>
+<span class="material-symbols-outlined text-label-md font-label-md ml-1" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Loop Card 1 -->
+<div class="p-4 rounded-xl bg-surface dark:bg-dark-surface-elevated border border-outline-variant/30 flex space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-secondary-container dark:bg-dark-surface-wine flex-shrink-0 flex items-center justify-center font-bold text-on-secondary-container">
+            RK
+          </div>
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">Rohan K.</span>
+<span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-textmuted">• 4th Sem BMSIT (CSE)</span>
+</div>
+<p class="text-body-sm font-body-sm text-light-text-main dark:text-dark-text-muted">
+              "Best place for group debugging sessions! 5G wifi actually works and the elaichi chai keeps us alive till 8 PM."
+            </p>
+<div class="flex items-center space-x-3 pt-1 text-label-sm font-label-sm text-light-text-muted">
+<span class="flex items-center"><span class="material-symbols-outlined text-label-md mr-1 text-primary-container" data-icon="favorite">favorite</span> 42 likes</span>
+<span class="flex items-center"><span class="material-symbols-outlined text-label-md mr-1" data-icon="share">share</span> 8 shares</span>
+</div>
+</div>
+</div>
+<!-- Loop Card 2 -->
+<div class="p-4 rounded-xl bg-surface dark:bg-dark-surface-elevated border border-outline-variant/30 flex space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed dark:bg-dark-surface-wine flex-shrink-0 flex items-center justify-center font-bold text-on-tertiary-fixed">
+            PS
+          </div>
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">Priya Sharma</span>
+<span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">• Resident, Avalahalli</span>
+</div>
+<p class="text-body-sm font-body-sm text-light-text-main dark:text-dark-text-muted">
+              "Quiet early morning vibe before the student rush. Ordered via QR code, cheese corn toast arrived in 6 minutes."
+            </p>
+<div class="flex items-center space-x-3 pt-1 text-label-sm font-label-sm text-light-text-muted">
+<span class="flex items-center"><span class="material-symbols-outlined text-label-md mr-1 text-primary-container" data-icon="favorite">favorite</span> 19 likes</span>
+<span class="flex items-center"><span class="material-symbols-outlined text-label-md mr-1" data-icon="share">share</span> 3 shares</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Navigation (Shared Components: BottomNavBar) -->
+<!-- Active state is 'Profile' as this is the business owner merchant management view -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs pb-safe h-16 bg-surface dark:bg-inverse-surface shadow-lg dark:shadow-none">
+<!-- Feed -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dynamic_feed">dynamic_feed</span>
+<span class="text-label-sm font-label-sm">Feed</span>
+</a>
+<!-- Discover -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-label-sm font-label-sm">Discover</span>
+</a>
+<!-- Post -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm">Post</span>
+</a>
+<!-- Saved -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="text-label-sm font-label-sm">Saved</span>
+</a>
+<!-- Profile (ACTIVE: Merchant Analytics belongs to Owner Profile / Management) -->
+<a class="flex flex-col items-center justify-center bg-primary-fixed dark:bg-primary-container text-on-primary-fixed dark:text-on-primary-container rounded-full px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm font-bold">Profile</span>
+</a>
+</nav>
+<!-- Interactive Dark Mode Micro-script -->
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark');
+        themeIcon.textContent = 'light_mode';
+      } else {
+        htmlElement.classList.add('dark');
+        themeIcon.textContent = 'dark_mode';
+      }
+    });
+  </script>
+</body></html>

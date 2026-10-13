@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LoopSquare: BMSIT &amp; Avalahalli Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#790d16",
+            "light-surface-container": "#ECE4D2",
+            "secondary-fixed-dim": "#d6c5a1",
+            "outline": "#8b716f",
+            "dark-surface-wine": "#261D1F",
+            "tertiary-fixed": "#cfe6f6",
+            "tertiary-container": "#293e4b",
+            "surface-container-low": "#f9f3e5",
+            "on-primary": "#ffffff",
+            "surface-dim": "#dfdacc",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1d1c13",
+            "on-tertiary-container": "#93a9b8",
+            "surface-container-high": "#eee8da",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f3eddf",
+            "dark-text-muted": "#C7BCA7",
+            "on-secondary-fixed": "#231a04",
+            "surface": "#fff9eb",
+            "on-primary-fixed-variant": "#891b20",
+            "on-tertiary-fixed": "#071e2a",
+            "surface-tint": "#aa3435",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#706346",
+            "primary-fixed-dim": "#ffb3af",
+            "on-surface-variant": "#584140",
+            "dark-surface-elevated": "#34282B",
+            "surface-bright": "#fff9eb",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#51452a",
+            "error": "#ba1a1a",
+            "secondary-container": "#f3e1bc",
+            "inverse-surface": "#333027",
+            "light-text-muted": "#695D56",
+            "on-tertiary-fixed-variant": "#354957",
+            "dark-border-cream": "#E5D3AF",
+            "surface-variant": "#e8e2d4",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "secondary": "#6a5d40",
+            "on-surface": "#1d1c13",
+            "primary-fixed": "#ffdad7",
+            "background": "#fff9eb",
+            "tertiary-fixed-dim": "#b3c9da",
+            "dark-bg-charcoal": "#1A1415",
+            "tertiary": "#132834",
+            "outline-variant": "#dfbfbd",
+            "on-primary-fixed": "#410005",
+            "dark-text-main": "#F5EFE1",
+            "inverse-on-surface": "#f6f0e2",
+            "secondary-fixed": "#f3e1bc",
+            "on-primary-container": "#ff7f7b",
+            "primary": "#540008",
+            "light-text-main": "#231B1C",
+            "inverse-primary": "#ffb3af",
+            "surface-container-highest": "#e8e2d4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xxs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "margin-tablet": "2rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.5rem",
+            "space-2xl": "3rem",
+            "margin-desktop": "3rem",
+            "space-xl": "2rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary min-h-screen pb-24 transition-colors duration-200">
+<!-- Top App Bar (Shared Components Anchor execution) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin h-14 bg-surface dark:bg-inverse-surface shadow-sm dark:shadow-none">
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-container text-surface">
+<span class="material-symbols-outlined text-headline-sm" data-icon="location_on">location_on</span>
+</div>
+<div>
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface tracking-tight flex items-center gap-1.5">
+<span>LoopSquare</span>
+<span class="text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full font-bold">BMSIT &amp; Avalahalli</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Search Trigger Button -->
+<button class="flex items-center justify-center w-9 h-9 rounded-lg hover:bg-surface-container dark:hover:bg-dark-surface-elevated text-on-surface-variant transition-colors" title="Search Hub">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<!-- Dark Mode Toggle Button -->
+<button class="flex items-center justify-center w-9 h-9 rounded-lg bg-surface-container-high dark:bg-dark-surface-elevated text-primary dark:text-tertiary-fixed hover:bg-surface-variant transition-colors" id="themeToggleBtn" title="Toggle Theme">
+<span class="material-symbols-outlined" data-icon="dark_mode" id="themeIcon">dark_mode</span>
+</button>
+<!-- Trailing Action EN | KN from Component Spec -->
+<button class="px-2.5 py-1 text-label-md font-label-md rounded-lg bg-surface-container text-primary font-bold hover:bg-surface-variant active:scale-95 transition-transform">
+        EN | KN
+      </button>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="max-w-5xl mx-auto pt-16 px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Hero / Neighborhood Context Banner -->
+<section class="mt-4 mb-5 p-space-lg rounded-xl bg-surface-container-low border border-light-surface-container relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="flex h-2.5 w-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-secondary font-bold">Campus &amp; Locality Radar</span>
+<span class="text-label-sm font-label-sm text-light-text-muted">• Yelahanka Post • Bengaluru 560064</span>
+</div>
+<h1 class="text-headline-md font-headline-md text-primary tracking-tight">The Student &amp; Resident Commons</h1>
+<p class="text-body-sm font-body-sm text-light-text-muted mt-1 max-w-xl">
+            Verified discussions, hackathon partners, sports slots, and spot reviews bridging BMS Institute of Technology &amp; Avalahalli Lake neighborhood.
+          </p>
+</div>
+<!-- Quick stats chip cluster -->
+<div class="flex items-center gap-3">
+<div class="bg-surface-container-lowest px-3 py-2 rounded-lg border border-light-surface-container text-center min-w-[76px]">
+<span class="block text-title-md font-title-md font-bold text-primary">1.8k</span>
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Active Students</span>
+</div>
+<div class="bg-surface-container-lowest px-3 py-2 rounded-lg border border-light-surface-container text-center min-w-[76px]">
+<span class="block text-title-md font-title-md font-bold text-secondary">420</span>
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Neighbors</span>
+</div>
+<div class="bg-surface-container-lowest px-3 py-2 rounded-lg border border-light-surface-container text-center min-w-[76px]">
+<span class="block text-title-md font-title-md font-bold text-emerald-700">98%</span>
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Verified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Search Bar & Filters -->
+<section class="mb-4">
+<div class="relative flex items-center mb-3">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full h-12 pl-11 pr-4 bg-surface-container-lowest rounded-lg border border-secondary-fixed focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-body-md font-body-md outline-none transition-all placeholder:text-light-text-muted" placeholder="Search posts, events, study groups, 'badminton slots', or cafes..." type="text"/>
+</div>
+<!-- Sorting Controls bar -->
+<div class="flex items-center justify-between border-b border-light-surface-container pb-2 mb-3">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<span class="text-label-sm font-label-sm text-light-text-muted font-bold mr-1 hidden sm:inline">SORT BY:</span>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-label-md font-label-md bg-primary-container text-on-primary font-bold shadow-sm">
+<span>🔥</span> Hot
+          </button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-label-md font-label-md bg-surface-container text-on-surface-variant hover:bg-surface-variant font-medium transition-colors">
+<span>⚡</span> New
+          </button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-label-md font-label-md bg-surface-container text-on-surface-variant hover:bg-surface-variant font-medium transition-colors">
+<span>🏆</span> Top
+          </button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-label-md font-label-md bg-secondary-fixed text-on-secondary-fixed font-bold hover:bg-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified_user">verified_user</span> 📍 Verified Neighbors
+          </button>
+</div>
+<div class="hidden md:flex items-center gap-1 text-label-sm font-label-sm text-secondary">
+<span class="material-symbols-outlined text-label-md" data-icon="rss_feed">rss_feed</span>
+<span>Live Feed</span>
+</div>
+</div>
+<!-- Sub-community & Flair pills horizontal snap carousel -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
+<button class="whitespace-nowrap px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-tertiary text-on-tertiary font-bold shadow-sm">
+          All
+        </button>
+<button class="whitespace-nowrap px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors border border-light-surface-container">
+          🎓 College Clubs
+        </button>
+<button class="whitespace-nowrap px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors border border-light-surface-container">
+          ❓ Q&amp;A &amp; Recommendations
+        </button>
+<button class="whitespace-nowrap px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors border border-light-surface-container">
+          🤝 Collab &amp; Buddy Up
+        </button>
+<button class="whitespace-nowrap px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors border border-light-surface-container">
+          ☕ Spot Reviews
+        </button>
+<button class="whitespace-nowrap px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container-high text-on-surface hover:bg-secondary-container transition-colors border border-light-surface-container">
+          🏸 Sports Slots
+        </button>
+</div>
+</section>
+<!-- Post Creation Quick Banner -->
+<section class="mb-6">
+<div class="bg-surface-container-lowest rounded-xl p-space-md border-2 border-dashed border-secondary-fixed hover:border-primary-container transition-all cursor-pointer group shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-primary flex items-center justify-center font-bold text-title-md">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</div>
+<div>
+<p class="text-title-sm font-title-sm text-light-text-main group-hover:text-primary transition-colors">
+              Got a question, review, or looking for group study? Create a Post
+            </p>
+<p class="text-body-sm font-body-sm text-light-text-muted">
+              Share updates with 2,200+ BMSIT peers &amp; Avalahalli residents instantly
+            </p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center group-hover:scale-105 active:scale-95 transition-all shadow-md">
+<span class="material-symbols-outlined font-bold" data-icon="add">add</span>
+</button>
+</div>
+</section>
+<!-- Community Posts Stream -->
+<section class="space-y-4">
+<!-- POST 1: ACM HackAvalahalli -->
+<article class="bg-surface-container-lowest rounded-xl border border-light-surface-container hover:border-outline-variant transition-all overflow-hidden shadow-sm">
+<div class="flex">
+<!-- Reddit-style Upvote Rail -->
+<div class="w-12 bg-surface-container-low/70 flex flex-col items-center py-3 select-none">
+<button class="p-1 hover:text-primary active:scale-125 transition-transform" title="Upvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_upward">arrow_upward</span>
+</button>
+<span class="text-label-md font-label-md font-bold text-primary my-0.5">142</span>
+<button class="p-1 hover:text-secondary active:scale-125 transition-transform" title="Downvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+<!-- Main Post Body -->
+<div class="flex-1 p-space-md">
+<!-- Metadata & Author Header -->
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center text-label-sm font-bold">
+                  ACM
+                </div>
+<div>
+<span class="text-label-md font-label-md font-bold text-light-text-main">BMSIT Coding Club (ACM Student Chapter)</span>
+<span class="text-label-sm font-label-sm text-light-text-muted ml-1">@acm_bmsit • 3h ago</span>
+</div>
+</div>
+<!-- Flair badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-primary-container text-on-primary font-bold">
+                🎓 Club Event • Tomorrow
+              </span>
+</div>
+<!-- Title -->
+<h2 class="text-title-md font-title-md text-primary font-bold mb-2">
+              HackAvalahalli 24hr Hackathon kickoff &amp; brainstorm session @ The Chai &amp; Code Cafe!
+            </h2>
+<!-- Body & Details -->
+<p class="text-body-md font-body-md text-on-surface-variant mb-3">
+              Free chai &amp; snacks for participants, working on campus IoT &amp; local tools. 3 slots open for UI designers! Bring your Figma setups and hardware prototypes.
+            </p>
+<!-- Event Highlight Card Bento -->
+<div class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-2.5 bg-surface-container-low p-3 rounded-lg border border-light-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_month">calendar_month</span>
+<div class="text-label-sm font-label-sm">
+<span class="text-light-text-muted block">When</span>
+<span class="font-bold text-light-text-main">Tomorrow, 10:30 AM</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="storefront">storefront</span>
+<div class="text-label-sm font-label-sm">
+<span class="text-light-text-muted block">Location</span>
+<span class="font-bold text-light-text-main">The Chai &amp; Code Cafe, 4th Cross</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="group_add">group_add</span>
+<div class="text-label-sm font-label-sm">
+<span class="text-light-text-muted block">Status</span>
+<span class="font-bold text-primary">3 Designer Slots Left</span>
+</div>
+</div>
+</div>
+<!-- Post Action Footer -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-light-surface-container">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="chat_bubble">chat_bubble</span>
+<span>38 comments</span>
+</button>
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="bookmark">bookmark</span>
+<span class="hidden sm:inline">Save</span>
+</button>
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-emerald-700 hover:text-emerald-800 transition-colors font-medium">
+<span class="material-symbols-outlined text-title-sm" data-icon="share">share</span>
+<span>WhatsApp Share</span>
+</button>
+</div>
+<!-- Action button from spec -->
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-surface hover:bg-primary text-label-md font-label-md font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="how_to_reg">how_to_reg</span>
+<span>RSVP / Join Collab</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- POST 2: Rahul Badminton Buddy Up -->
+<article class="bg-surface-container-lowest rounded-xl border border-light-surface-container hover:border-outline-variant transition-all overflow-hidden shadow-sm">
+<div class="flex">
+<!-- Reddit Upvote Rail -->
+<div class="w-12 bg-surface-container-low/70 flex flex-col items-center py-3 select-none">
+<button class="p-1 hover:text-primary active:scale-125 transition-transform" title="Upvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_upward">arrow_upward</span>
+</button>
+<span class="text-label-md font-label-md font-bold text-primary my-0.5">28</span>
+<button class="p-1 hover:text-secondary active:scale-125 transition-transform" title="Downvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+<!-- Main Post Body -->
+<div class="flex-1 p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center text-label-sm font-bold">
+                  R
+                </div>
+<div>
+<span class="text-label-md font-label-md font-bold text-light-text-main">Rahul_BMSIT_CSE</span>
+<span class="inline-flex items-center text-label-sm font-label-sm text-emerald-800 ml-1 font-semibold">
+<span class="material-symbols-outlined text-[14px] mr-0.5" data-icon="verified">verified</span> Verified Student
+                  </span>
+<span class="text-label-sm font-label-sm text-light-text-muted ml-1">• 1h ago</span>
+</div>
+</div>
+<!-- Flair badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-tertiary font-bold">
+                🤝 Collab / Buddy Up
+              </span>
+</div>
+<!-- Title -->
+<h2 class="text-title-md font-title-md text-light-text-main font-bold mb-2">
+              Anyone up for badminton at SmashZone today 6 PM? Need 2 more players for doubles!
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-3">
+              Court 3 is booked for 6:00 PM – 7:30 PM. Intermediate level. Just carry your indoor non-marking shoes and racquets. Splitting the court fee (₹120/head).
+            </p>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-light-surface-container">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="chat_bubble">chat_bubble</span>
+<span>12 replies</span>
+</button>
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="share">share</span>
+<span>Share</span>
+</button>
+</div>
+<!-- Join Game button -->
+<div>
+<button class="px-4 py-1.5 rounded-lg bg-secondary text-surface hover:bg-on-secondary-fixed text-label-md font-label-md font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="sports_tennis">sports_tennis</span>
+<span>Join Game</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- POST 3: Dr. Ananya Resident Lake Alert -->
+<article class="bg-surface-container-lowest rounded-xl border border-light-surface-container hover:border-outline-variant transition-all overflow-hidden shadow-sm">
+<div class="flex">
+<!-- Reddit Upvote Rail -->
+<div class="w-12 bg-surface-container-low/70 flex flex-col items-center py-3 select-none">
+<button class="p-1 hover:text-primary active:scale-125 transition-transform" title="Upvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_upward">arrow_upward</span>
+</button>
+<span class="text-label-md font-label-md font-bold text-primary my-0.5">56</span>
+<button class="p-1 hover:text-secondary active:scale-125 transition-transform" title="Downvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+<!-- Main Post Body -->
+<div class="flex-1 p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-tint text-on-primary flex items-center justify-center text-label-sm font-bold">
+                  DA
+                </div>
+<div>
+<span class="text-label-md font-label-md font-bold text-light-text-main">Dr. Ananya</span>
+<span class="inline-flex items-center text-label-sm font-label-sm text-secondary ml-1 font-semibold">
+<span class="material-symbols-outlined text-[14px] mr-0.5" data-icon="cottage">cottage</span> Avalahalli Resident
+                  </span>
+<span class="text-label-sm font-label-sm text-light-text-muted ml-1">• 4h ago</span>
+</div>
+</div>
+<!-- Flair badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary-container font-bold">
+                ❓ Neighbor Inquiry &amp; Lake Alert
+              </span>
+</div>
+<!-- Title -->
+<h2 class="text-title-md font-title-md text-light-text-main font-bold mb-2">
+              Is Avalahalli Lake gate open today evening after the rain?
+            </h2>
+<!-- Verified pinned answer callout -->
+<div class="p-3 mb-3 bg-secondary-fixed/30 border-l-4 border-secondary rounded-r-lg">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-secondary text-title-sm" data-icon="check_circle">check_circle</span>
+<span class="text-label-sm font-label-sm font-bold text-on-secondary-fixed uppercase tracking-wider">Verified Answer Pinned by BBMP Warden</span>
+</div>
+<p class="text-body-md font-body-md text-light-text-main font-medium">
+                "Yes, open till 6:30 PM! Water cleared on the north jogging track. Muddy near the south gazebo but fully accessible for runners."
+              </p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-light-surface-container">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="chat_bubble">chat_bubble</span>
+<span>19 comments</span>
+</button>
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="share">share</span>
+<span>Share</span>
+</button>
+</div>
+<div class="text-label-sm font-label-sm text-light-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="visibility">visibility</span>
+<span>312 views</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- POST 4: Sneha Spot Review -->
+<article class="bg-surface-container-lowest rounded-xl border border-light-surface-container hover:border-outline-variant transition-all overflow-hidden shadow-sm">
+<div class="flex">
+<!-- Reddit Upvote Rail -->
+<div class="w-12 bg-surface-container-low/70 flex flex-col items-center py-3 select-none">
+<button class="p-1 hover:text-primary active:scale-125 transition-transform" title="Upvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_upward">arrow_upward</span>
+</button>
+<span class="text-label-md font-label-md font-bold text-primary my-0.5">89</span>
+<button class="p-1 hover:text-secondary active:scale-125 transition-transform" title="Downvote">
+<span class="material-symbols-outlined text-headline-sm" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+<!-- Main Post Body -->
+<div class="flex-1 p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center text-label-sm font-bold">
+                  S3
+                </div>
+<div>
+<span class="text-label-md font-label-md font-bold text-light-text-main">Sneha_3rdYear</span>
+<span class="text-label-sm font-label-sm text-light-text-muted ml-1">• 6h ago</span>
+</div>
+</div>
+<!-- Flair badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-variant text-on-surface-variant font-bold">
+                ☕ Spot Review
+              </span>
+</div>
+<!-- Title -->
+<h2 class="text-title-md font-title-md text-light-text-main font-bold mb-2">
+              Honest review: The Chai &amp; Code Cafe Wi-Fi test during semester prep (150 Mbps, super quiet before 4pm)
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-3">
+              Did a 4-hour sprint on DSA here. Plugs at every wooden bench, great cold brew (₹90 student discount with BMSIT ID). Gets noisy around 5 PM with post-lab rush, but perfect morning focus zone.
+            </p>
+<!-- Score breakdown pill row -->
+<div class="flex flex-wrap items-center gap-2 mb-3">
+<span class="px-2 py-1 rounded bg-surface-container text-label-sm font-label-sm font-bold text-emerald-800">
+                📶 Wi-Fi: 9.5/10 (150 Mbps)
+              </span>
+<span class="px-2 py-1 rounded bg-surface-container text-label-sm font-label-sm font-bold text-secondary">
+                🔌 Power Outlets: Available
+              </span>
+<span class="px-2 py-1 rounded bg-surface-container text-label-sm font-label-sm font-bold text-primary">
+                ☕ Ginger Chai: ₹25
+              </span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-light-surface-container">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="chat_bubble">chat_bubble</span>
+<span>24 comments</span>
+</button>
+<button class="flex items-center gap-1.5 text-label-md font-label-md text-light-text-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-title-sm" data-icon="bookmark">bookmark</span>
+<span>Saved to Spot Guide</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 text-label-sm font-label-sm rounded-lg bg-surface-container hover:bg-surface-variant text-primary font-bold">
+                  View Menu &amp; Map
+                </button>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Campus & Locality Sidebar Bento (Desktop Layout enhancement) -->
+<section class="mt-8 mb-6 p-space-md rounded-xl bg-surface-container-high/60 border border-light-surface-container flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-primary font-bold">LocalLoop Neighborhood Moderation Council</h3>
+<p class="text-body-sm font-body-sm text-light-text-muted">
+            Posts are moderated jointly by BMSIT Student Council and Avalahalli Residents Welfare Association (ARWA).
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-outline text-label-md font-label-md font-bold text-on-surface hover:bg-surface-container transition-colors">
+          Campus Guidelines
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary text-label-md font-label-md font-bold hover:bg-primary transition-colors">
+          Join Moderation
+        </button>
+</div>
+</section>
+</main>
+<!-- Docked Bottom Navigation Bar (Shared Components Anchor Execution) -->
+<!-- Note: Shared JSON specifies destination_count: 5 with ['Feed', 'Discover', 'Post', 'Saved', 'Profile'] -->
+<!-- Intent: LoopSquare acts as the active campus community destination under Feed/Discover ecosystem. As mandated, active state is styled with exact JSON classes -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs pb-safe h-16 bg-surface dark:bg-inverse-surface shadow-lg dark:shadow-none">
+<!-- Item 1: Feed (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface dark:hover:text-inverse-on-surface active:scale-95 transition-transform duration-150" href="#feed">
+<span class="material-symbols-outlined text-[22px]" data-icon="dynamic_feed">dynamic_feed</span>
+<span class="text-label-sm font-label-sm mt-0.5">Feed</span>
+</a>
+<!-- Item 2: Discover (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface dark:hover:text-inverse-on-surface active:scale-95 transition-transform duration-150" href="#discover">
+<span class="material-symbols-outlined text-[22px]" data-icon="explore">explore</span>
+<span class="text-label-sm font-label-sm mt-0.5">Discover</span>
+</a>
+<!-- Item 3: Post (Active Center Action or Creation) -->
+<!-- Mapped directly to JSON 'Post' using style_active_navigation as LoopSquare Active feed interaction hub -->
+<a class="flex flex-col items-center justify-center bg-primary-fixed dark:bg-primary-container text-on-primary-fixed dark:text-on-primary-container rounded-full px-3 py-1 active:scale-95 transition-transform duration-150" href="#post">
+<span class="material-symbols-outlined text-[22px]" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm font-bold mt-0.5">Post</span>
+</a>
+<!-- Item 4: Saved (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface dark:hover:text-inverse-on-surface active:scale-95 transition-transform duration-150" href="#saved">
+<span class="material-symbols-outlined text-[22px]" data-icon="bookmark">bookmark</span>
+<span class="text-label-sm font-label-sm mt-0.5">Saved</span>
+</a>
+<!-- Item 5: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-3 py-1 hover:bg-surface-container dark:hover:bg-inverse-surface hover:text-on-surface dark:hover:text-inverse-on-surface active:scale-95 transition-transform duration-150" href="#profile">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+<!-- Interactive JavaScript for micro-interactions & Theme toggle -->
+<script>
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlEl = document.documentElement;
+
+    themeBtn.addEventListener('click', () => {
+      if (htmlEl.classList.contains('dark')) {
+        htmlEl.classList.remove('dark');
+        themeIcon.textContent = 'dark_mode';
+        themeIcon.setAttribute('data-icon', 'dark_mode');
+      } else {
+        htmlEl.classList.add('dark');
+        themeIcon.textContent = 'light_mode';
+        themeIcon.setAttribute('data-icon', 'light_mode');
+      }
+    });
+
+    // Upvote counter micro-interactions
+    document.querySelectorAll('[data-icon="arrow_upward"]').forEach(btn => {
+      btn.parentElement.addEventListener('click', function(e) {
+        const counter = this.parentElement.querySelector('span.text-label-md');
+        if (counter && !this.dataset.voted) {
+          let count = parseInt(counter.textContent);
+          counter.textContent = count + 1;
+          this.dataset.voted = "true";
+          this.classList.add('text-primary');
+        }
+      });
+    });
+  </script>
+<script src="../localloop-demo.js"></script></body></html>

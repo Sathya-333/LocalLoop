@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Avalahalli Lake Bird Sanctuary &amp; Walking Trail</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#790d16",
+            "light-surface-container": "#ECE4D2",
+            "secondary-fixed-dim": "#d6c5a1",
+            "outline": "#8b716f",
+            "dark-surface-wine": "#261D1F",
+            "tertiary-fixed": "#cfe6f6",
+            "tertiary-container": "#293e4b",
+            "surface-container-low": "#f9f3e5",
+            "on-primary": "#ffffff",
+            "surface-dim": "#dfdacc",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1d1c13",
+            "on-tertiary-container": "#93a9b8",
+            "surface-container-high": "#eee8da",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f3eddf",
+            "dark-text-muted": "#C7BCA7",
+            "on-secondary-fixed": "#231a04",
+            "surface": "#fff9eb",
+            "on-primary-fixed-variant": "#891b20",
+            "on-tertiary-fixed": "#071e2a",
+            "surface-tint": "#aa3435",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#706346",
+            "primary-fixed-dim": "#ffb3af",
+            "on-surface-variant": "#584140",
+            "dark-surface-elevated": "#34282B",
+            "surface-bright": "#fff9eb",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#51452a",
+            "error": "#ba1a1a",
+            "secondary-container": "#f3e1bc",
+            "inverse-surface": "#333027",
+            "light-text-muted": "#695D56",
+            "on-tertiary-fixed-variant": "#354957",
+            "dark-border-cream": "#E5D3AF",
+            "surface-variant": "#e8e2d4",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "secondary": "#6a5d40",
+            "on-surface": "#1d1c13",
+            "primary-fixed": "#ffdad7",
+            "background": "#fff9eb",
+            "tertiary-fixed-dim": "#b3c9da",
+            "dark-bg-charcoal": "#1A1415",
+            "tertiary": "#132834",
+            "outline-variant": "#dfbfbd",
+            "on-primary-fixed": "#410005",
+            "dark-text-main": "#F5EFE1",
+            "inverse-on-surface": "#f6f0e2",
+            "secondary-fixed": "#f3e1bc",
+            "on-primary-container": "#ff7f7b",
+            "primary": "#540008",
+            "light-text-main": "#231B1C",
+            "inverse-primary": "#ffb3af",
+            "surface-container-highest": "#e8e2d4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xxs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "margin-tablet": "2rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.5rem",
+            "space-2xl": "3rem",
+            "margin-desktop": "3rem",
+            "space-xl": "2rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-ring {
+      box-shadow: 0 0 0 1px rgba(121, 13, 22, 0.12);
+    }
+    .glass-pill {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-background text-light-text-main dark:bg-dark-bg-charcoal dark:text-dark-text-main antialiased min-h-screen selection:bg-secondary-fixed selection:text-primary transition-colors duration-200">
+<!-- TOP APP BAR -->
+<header class="sticky top-0 z-50 bg-surface/95 dark:bg-dark-bg-charcoal/95 backdrop-blur-md shadow-sm dark:shadow-none transition-colors duration-200">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop h-14 flex items-center justify-between">
+<!-- Back & Spot Context -->
+<div class="flex items-center gap-space-xs">
+<button aria-label="Go Back" class="w-10 h-10 rounded-full flex items-center justify-center text-primary dark:text-inverse-primary hover:bg-surface-container dark:hover:bg-dark-surface-wine transition-all active:scale-95" onclick="history.back()">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary dark:text-inverse-primary">location_on</span>
+            Yelahanka • near BMSIT
+          </span>
+<span class="text-title-sm font-title-sm text-light-text-main dark:text-dark-text-main font-bold line-clamp-1">Avalahalli Lake Trail</span>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-space-xs">
+<!-- Live Status indicator mini badge (Desktop) -->
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/40">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="text-label-sm font-label-sm text-emerald-800 dark:text-emerald-300 font-bold">OPEN NOW</span>
+</div>
+<!-- Share Button -->
+<button aria-label="Share Trail" class="w-10 h-10 rounded-full flex items-center justify-center text-light-text-main dark:text-dark-text-main hover:bg-surface-container dark:hover:bg-dark-surface-wine transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<!-- Bookmark / Save -->
+<button aria-label="Bookmark Spot" class="w-10 h-10 rounded-full flex items-center justify-center text-light-text-main dark:text-dark-text-main hover:bg-surface-container dark:hover:bg-dark-surface-wine transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+<!-- Dark Mode Toggle Button -->
+<button aria-label="Toggle Dark Mode" class="h-10 px-3 rounded-full flex items-center gap-1.5 bg-surface-container-high dark:bg-dark-surface-wine text-light-text-main dark:text-dark-text-main border border-light-surface-container dark:border-dark-border-cream/20 hover:border-outline-variant transition-all active:scale-95" id="theme-toggle">
+<span class="material-symbols-outlined text-[18px]" id="theme-icon">dark_mode</span>
+<span class="text-label-sm font-label-sm hidden md:inline">Theme</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-md md:py-space-xl space-y-space-lg md:space-y-space-xl pb-24 md:pb-16">
+<!-- HERO SECTION WITH INTEGRATED BANNER & LIVE BADGES -->
+<section class="relative rounded-xl overflow-hidden shadow-sm dark:shadow-none border border-light-surface-container dark:border-dark-border-cream/20 bg-surface-container-lowest dark:bg-dark-surface-wine">
+<div class="relative w-full h-[320px] md:h-[460px] lg:h-[500px]">
+<img class="w-full h-full object-cover" data-alt="A tranquil, sun-drenched wide angle photograph of Avalahalli Lake near Bengaluru at golden hour. Warm amber and deep burgundy sun rays glisten across calm ripple water flanked by lush eucalyptus canopies and an earthy reddish-brown paved jogging trail. A flock of migratory white egrets flies low over the wetland reeds under a soft gradient of slate blue and pastel peach sky. The editorial framing evokes serene neighborhood nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm3UMp4KXhWu5tSfCuAcOHBOyD1PcTEwHsTt3du1KP3LMcbSzZTpj1MW4t16poK04Mwk9TtUE0NWqfGRBiaMvNu_aAZvNZmbPT2JrSYbqG-V1jiq9Aonys7iyVQNLpsoyO_NgG2-166iNEp4YMbqAiT7ELgFMQUy_mStBdgIsxxaPcNk0nTWVywJUHblf_5xEi2d2c7TB65rgPwK_TvRMFQCxiLQGP5wHDiwW5eptIrvsY4-Z8mfF2CA"/>
+<!-- Gradients for readable content -->
+<div class="absolute inset-0 bg-gradient-to-t from-dark-bg-charcoal/90 via-dark-bg-charcoal/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/30 to-transparent mix-blend-multiply"></div>
+<!-- Floating Badges Top Right (Weather & Proximity) -->
+<div class="absolute top-4 right-4 flex flex-col items-end gap-2">
+<div class="glass-pill bg-dark-bg-charcoal/80 text-dark-text-main border border-dark-border-cream/25 rounded-full px-3.5 py-1.5 flex items-center gap-2 shadow-lg">
+<span class="material-symbols-outlined text-amber-300 text-[18px]">wb_twilight</span>
+<span class="text-label-sm font-label-sm font-semibold tracking-wide">26°C Sunset Breeze</span>
+</div>
+<div class="glass-pill bg-dark-bg-charcoal/70 text-dark-text-muted border border-white/10 rounded-full px-3 py-1 flex items-center gap-1.5 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">directions_walk</span>
+<span>1.2 km from BMSIT</span>
+</div>
+</div>
+<!-- Hero Content Bottom Overlay -->
+<div class="absolute bottom-0 left-0 right-0 p-space-md md:p-space-xl text-on-primary">
+<div class="flex flex-wrap items-center gap-2 mb-2">
+<!-- PREDOMINANT LIVE STATUS BADGE -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-600/90 text-white font-label-md text-label-md border border-emerald-400/40 shadow-md">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+</span>
+<span class="font-bold tracking-wide">OPEN NOW</span>
+<span class="text-emerald-100 font-medium text-label-sm">(Closes at 6:30 PM)</span>
+</div>
+<div class="glass-pill inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-dark-bg-charcoal/60 text-dark-text-muted border border-white/20 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-300">verified</span>
+<span>BBMP Forest Cell Protected</span>
+</div>
+</div>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-white font-extrabold tracking-tight drop-shadow-sm">
+            Avalahalli Lake Bird Sanctuary &amp; Walking Trail
+          </h1>
+<p class="text-body-sm md:text-body-md font-body-md text-white/90 max-w-2xl mt-1 line-clamp-2 md:line-clamp-none">
+            A preserved freshwater bio-reserve featuring migratory spot-billed pelicans, serene wetland viewpoints, and an unpaved peripheral loop preferred by local runners and student naturalists.
+          </p>
+</div>
+</div>
+<!-- Real-Time Timings & Alert Strip -->
+<div class="bg-secondary-container/60 dark:bg-dark-surface-elevated/90 border-t border-light-surface-container dark:border-dark-border-cream/20 px-space-md py-3 flex flex-col md:flex-row md:items-center justify-between gap-2.5">
+<div class="flex items-start md:items-center gap-2 text-on-secondary-fixed dark:text-dark-text-main">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-[20px] mt-0.5 md:mt-0">schedule</span>
+<span class="text-body-sm font-body-sm font-medium">
+<strong class="font-bold">Official Timings:</strong> Morning: 5:30 AM – 9:30 AM • Evening: 4:00 PM – 6:30 PM <span class="text-primary dark:text-on-primary-container font-semibold">(Gates strictly close at sunset)</span>
+</span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted shrink-0">
+<span class="material-symbols-outlined text-[16px] text-emerald-600 dark:text-emerald-400">group</span>
+<span>Low Crowd (Good for runs)</span>
+</div>
+</div>
+</section>
+<!-- BENTO GRID: DETAILS & REAL-TIME COMMUNITY PULSE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: QUICK INFO & TRAIL RULES (7 COLS) -->
+<div class="lg:col-span-7 space-y-space-lg">
+<!-- Quick Info Grid -->
+<section class="bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md md:p-space-lg border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between mb-space-md">
+<h2 class="text-headline-sm font-headline-sm text-light-text-main dark:text-dark-text-main font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container dark:text-inverse-primary">insights</span>
+              Spot Essentials
+            </h2>
+<span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Verified by Community</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+<!-- Entry Card -->
+<div class="bg-surface-container-low dark:bg-dark-surface-elevated/60 p-space-sm rounded-lg border border-light-surface-container/60 dark:border-dark-border-cream/15 flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary dark:text-primary-fixed-dim mb-1">
+<span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-light-text-muted dark:text-dark-text-muted">Pass</span>
+</div>
+<div>
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">Free Entry</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Public municipal reserve</p>
+</div>
+</div>
+<!-- Track Length -->
+<div class="bg-surface-container-low dark:bg-dark-surface-elevated/60 p-space-sm rounded-lg border border-light-surface-container/60 dark:border-dark-border-cream/15 flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary dark:text-primary-fixed-dim mb-1">
+<span class="material-symbols-outlined text-[20px]">straighten</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-light-text-muted dark:text-dark-text-muted">Circuit</span>
+</div>
+<div>
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">2.8 km Track</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Paved walking &amp; clay lane</p>
+</div>
+</div>
+<!-- Distance from College -->
+<div class="bg-surface-container-low dark:bg-dark-surface-elevated/60 p-space-sm rounded-lg border border-light-surface-container/60 dark:border-dark-border-cream/15 flex flex-col justify-between col-span-2 sm:col-span-1">
+<div class="flex items-center justify-between text-primary dark:text-primary-fixed-dim mb-1">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-light-text-muted dark:text-dark-text-muted">Proximity</span>
+</div>
+<div>
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">1.2 km from BMSIT</p>
+<p class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">4 min bike / 14 min walk</p>
+</div>
+</div>
+</div>
+<!-- Trail Rules Callout -->
+<div class="mt-space-md p-space-md rounded-lg bg-surface-container dark:bg-dark-surface-elevated border border-secondary-fixed dark:border-dark-border-cream/20">
+<h3 class="text-label-lg font-label-lg text-primary dark:text-inverse-primary font-bold flex items-center gap-1.5 mb-2">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+              Lake Sanctuary Guidelines
+            </h3>
+<ul class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+<li class="flex items-center gap-2 text-body-sm font-body-sm text-light-text-main dark:text-dark-text-main">
+<span class="material-symbols-outlined text-rose-700 dark:text-rose-400 text-[18px]">do_not_disturb_on</span>
+<span>No cycling on inner track</span>
+</li>
+<li class="flex items-center gap-2 text-body-sm font-body-sm text-light-text-main dark:text-dark-text-main">
+<span class="material-symbols-outlined text-emerald-700 dark:text-emerald-400 text-[18px]">pets</span>
+<span>Pet friendly on leash</span>
+</li>
+<li class="flex items-center gap-2 text-body-sm font-body-sm text-light-text-main dark:text-dark-text-main">
+<span class="material-symbols-outlined text-emerald-700 dark:text-emerald-400 text-[18px]">delete_sweep</span>
+<span>Zero-waste, trash free zone</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Live Community & Visitor Pulse -->
+<section class="bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md md:p-space-lg border border-light-surface-container dark:border-dark-border-cream/20 shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-light-text-main dark:text-dark-text-main font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container dark:text-inverse-primary">sensors</span>
+                Visitor Pulse &amp; Activity
+              </h2>
+<p class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted">Live signals from campus clubs &amp; local bird watchers</p>
+</div>
+<!-- Sunset Photo Score -->
+<div class="text-right">
+<div class="flex items-center justify-end gap-1 text-amber-600 dark:text-amber-400">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-headline-sm font-headline-sm font-extrabold text-light-text-main dark:text-dark-text-main">4.9</span>
+<span class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted">/5</span>
+</div>
+<span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">Sunset Photography Rating</span>
+</div>
+</div>
+<!-- Live check-in banner -->
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-surface-container-low dark:bg-dark-surface-elevated/70 border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-[24px] mt-0.5">how_to_reg</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">
+                  Recent visitor check-ins
+                </p>
+<span class="text-label-sm font-label-sm text-light-text-muted dark:text-dark-text-muted">18 mins ago</span>
+</div>
+<p class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted mt-0.5">
+                Checked in by <strong class="text-light-text-main dark:text-dark-text-main font-semibold">BMSIT Eco Club</strong>: "Water level is clear, southern bird hide has 6 spoonbills nesting today. South gate gatekeeper is active."
+              </p>
+</div>
+</div>
+<!-- Photo Spotlight mini gallery -->
+<div class="mt-space-md grid grid-cols-3 gap-space-xs">
+<div class="relative h-24 rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Close up photography of purple swamphen resting on lake reeds in morning sunlight at Avalahalli Lake with clear water reflection. Styled with warm natural lighting, earthy beige tones, and soft focus bokeh." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDczw58Bnhm8W-9LQOuKgP7zTxaspOuDuXyb_lxTIWKvWT4yeaxiF4QP373ehytvIZ1KW7E5cRGRXbNBmEI3oPnebekCuGMYSppAkjwQ9DZY_mw0sepLMftHk8THyi4PkYSOf-1SSQo0ueyH2lqhUoNxqiV3a-V0qHU4Rj75IdqTGOeU5X4pXpwHEoHHkx6747TIglKN-FGrcnDVEYzaVC2Y7WuXXn431WoT6TkKwTlZiGuqrihdMttJw"/>
+<span class="absolute bottom-1 left-1.5 text-label-sm font-label-sm text-white drop-shadow bg-dark-bg-charcoal/60 px-1.5 py-0.5 rounded">Swamphen</span>
+</div>
+<div class="relative h-24 rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="A wooden viewing bench along a red soil walking path overlooking calm lake waters during a warm sunny evening in Bangalore. High dynamic range with soft golden textures and lush green trees." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFG_6-l7lzMItLses_s4wq3YWtUckDxbmr8_bNIdyb_REVjmnlDvHN8RVRroet47X5DKPANkp_MpeM1y2TBunC6ohZ2K6H8T_NDsWGTbCt-IodegzdsmNeqTD-WFCkSxwisBl2PSzSKypeWW4ZecveYVrMuXyDbbkTbfQy5I08qJweqTDBipCWGLtpsZ1NNFmm-80C12opnsvTqRnP8CFraWSmPC5g_aswsHpx2FL7H-uqKRCG2XItyg"/>
+<span class="absolute bottom-1 left-1.5 text-label-sm font-label-sm text-white drop-shadow bg-dark-bg-charcoal/60 px-1.5 py-0.5 rounded">Sunset Bench</span>
+</div>
+<div class="relative h-24 rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Scenic wooden bird-watching observation deck reaching over the tranquil Avalahalli Lake with distant hills in soft slate blue haze under radiant evening light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG7CNXHJIbD-WjPFMDA5FjICXQE_uI7FzDutUYXdog_V8DL6KuBU7gLb-6ZUf7Ycol3tMgvDPJI23zlBq_E57PtQPxIWMo__m-RsFoFyU6cs9CwC7bCCP-c9hGrarnZIiWZjy8yu8-jq_xwGhu8T5gF8npt-ziTkaRTQDB9KQ8xfi-W1TWDem46JmxHwiQXJ3ZbcsiD-KFZfs7eiCNsqwEePU27yBtKV99-ptMGvNwEngARlz548T4nw"/>
+<span class="absolute bottom-1 left-1.5 text-label-sm font-label-sm text-white drop-shadow bg-dark-bg-charcoal/60 px-1.5 py-0.5 rounded">Observation Pier</span>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: PINNED COMMUNITY WALKS & ACTIONS (5 COLS) -->
+<div class="lg:col-span-5 space-y-space-lg">
+<!-- PINNED UPCOMING GROUP WALK CARD -->
+<section class="bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md md:p-space-lg border-2 border-primary-container/20 dark:border-primary-fixed-dim/30 shadow-md">
+<div class="flex items-center justify-between pb-3 border-b border-light-surface-container dark:border-dark-border-cream/20">
+<span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold bg-primary-fixed dark:bg-primary-container text-on-primary-fixed dark:text-on-primary tracking-wide uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">push_pin</span>
+              Pinned Event
+            </span>
+<span class="text-label-sm font-label-sm text-emerald-700 dark:text-emerald-400 font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Confirmed Today
+            </span>
+</div>
+<div class="mt-4">
+<div class="flex items-start gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary-container/40 text-primary dark:text-inverse-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">sprint</span>
+</div>
+<div>
+<h3 class="text-title-md font-title-md font-bold text-light-text-main dark:text-dark-text-main">
+                  BMSIT Runners Club: 5K Sunset Jog
+                </h3>
+<p class="text-body-sm font-body-sm text-light-text-muted dark:text-dark-text-muted mt-0.5">
+                  Meeting at North Entrance Gazebo • Paced at 6:15 min/km with beginner loop option.
+                </p>
+</div>
+</div>
+<!-- Meta attributes -->
+<div class="mt-4 grid grid-cols-2 gap-2 text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-light-text-main dark:text-dark-text-main bg-surface-container-low dark:bg-dark-surface-elevated px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-[18px]">alarm</span>
+<span class="font-semibold">Today @ 5:15 PM</span>
+</div>
+<div class="flex items-center gap-1.5 text-light-text-main dark:text-dark-text-main bg-surface-container-low dark:bg-dark-surface-elevated px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-[18px]">group</span>
+<span><strong>12 students</strong> going</span>
+</div>
+</div>
+<!-- Avatars of participants -->
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center -space-x-2 overflow-hidden">
+<span class="inline-flex h-8 w-8 rounded-full ring-2 ring-white dark:ring-dark-surface-wine bg-secondary-fixed text-on-secondary-fixed text-label-sm font-bold items-center justify-center">AR</span>
+<span class="inline-flex h-8 w-8 rounded-full ring-2 ring-white dark:ring-dark-surface-wine bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-bold items-center justify-center">VK</span>
+<span class="inline-flex h-8 w-8 rounded-full ring-2 ring-white dark:ring-dark-surface-wine bg-primary-fixed text-on-primary-fixed text-label-sm font-bold items-center justify-center">SN</span>
+<span class="inline-flex h-8 w-8 rounded-full ring-2 ring-white dark:ring-dark-surface-wine bg-light-surface-container dark:bg-dark-surface-elevated text-light-text-muted dark:text-dark-text-muted text-label-sm font-bold items-center justify-center">+9</span>
+</div>
+<button class="bg-primary text-on-primary hover:bg-[#610A11] px-5 py-2.5 rounded-lg text-label-lg font-label-lg font-bold shadow transition-all active:scale-95 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+                Join Walk
+              </button>
+</div>
+</div>
+</section>
+<!-- COMMUNITY COLLABORATION & ACTION BAR -->
+<section class="bg-surface-container-lowest dark:bg-dark-surface-wine rounded-xl p-space-md md:p-space-lg border border-light-surface-container dark:border-dark-border-cream/20 space-y-3.5 shadow-sm dark:shadow-none">
+<h3 class="text-title-sm font-title-sm font-bold text-light-text-main dark:text-dark-text-main">
+            Get Involved at this Spot
+          </h3>
+<!-- Primary Burgundy Collaboration Button -->
+<button class="w-full bg-[#790D16] hover:bg-[#610A11] text-[#F5EFE1] py-3.5 px-space-md rounded-lg text-title-sm font-title-sm font-bold flex items-center justify-center gap-2 shadow transition-all active:scale-95">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+            Plan Evening Group Walk
+          </button>
+<!-- Secondary Report Button -->
+<button class="w-full bg-[#E5D3AF] hover:bg-[#D6C097] text-[#231B1C] dark:bg-dark-surface-wine dark:border dark:border-dark-border-cream/40 dark:text-[#F5EFE1] py-3.5 px-space-md rounded-lg text-title-sm font-title-sm font-semibold flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">report_problem</span>
+            Report Gate/Safety Status
+          </button>
+<!-- Citizen Safety / Amenities mini tags -->
+<div class="pt-2 border-t border-light-surface-container dark:border-dark-border-cream/20 flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm px-2.5 py-1 rounded-full bg-surface-container dark:bg-dark-surface-elevated text-light-text-muted dark:text-dark-text-muted">
+<span class="material-symbols-outlined text-[14px]">local_parking</span>
+              BMSIT Front Gate Parking (Free)
+            </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm px-2.5 py-1 rounded-full bg-surface-container dark:bg-dark-surface-elevated text-light-text-muted dark:text-dark-text-muted">
+<span class="material-symbols-outlined text-[14px]">security</span>
+              Security Guard at North Post
+            </span>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm px-2.5 py-1 rounded-full bg-surface-container dark:bg-dark-surface-elevated text-light-text-muted dark:text-dark-text-muted">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+              Potable Water Station at Kiosk
+            </span>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- STICKY ACTION ANCHOR FOR QUICK ON-THE-GO ENGAGEMENT (Mobile Floating) -->
+<aside class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-surface/95 dark:bg-dark-bg-charcoal/95 backdrop-blur-md border-t border-light-surface-container dark:border-dark-border-cream/20 z-40 flex items-center gap-2">
+<button class="flex-1 bg-[#790D16] text-[#F5EFE1] py-3 rounded-lg text-label-lg font-label-lg font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+      Plan Group Walk
+    </button>
+<button aria-label="Report Status" class="h-12 w-12 rounded-lg bg-[#E5D3AF] text-[#231B1C] dark:bg-dark-surface-wine dark:border dark:border-dark-border-cream dark:text-[#F5EFE1] flex items-center justify-center shrink-0 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</button>
+</aside>
+<!-- Interactive Dark Mode & Status Script -->
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElem = document.documentElement;
+
+    function applyTheme(isDark) {
+      if (isDark) {
+        htmlElem.classList.add('dark');
+        htmlElem.classList.remove('light');
+        if (themeIcon) themeIcon.textContent = 'light_mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        htmlElem.classList.remove('dark');
+        htmlElem.classList.add('light');
+        if (themeIcon) themeIcon.textContent = 'dark_mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Initialize based on saved preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      applyTheme(true);
+    } else {
+      applyTheme(false);
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isCurrentlyDark = htmlElem.classList.contains('dark');
+      applyTheme(!isCurrentlyDark);
+    });
+  </script>
+</body></html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LocalLoop - BMSIT, Avalahalli</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            // Light & Dark system mappings based on prompt specs
+            primary: "#790D16",
+            "primary-container": "#540008",
+            "primary-light": "#A01B26",
+            "primary-hover": "#630A12",
+            "background": "#F5EFE1",
+            "dark-bg": "#161214",
+            "surface-card": "#FFFFFF",
+            "dark-card": "#231B1E",
+            "surface-sand": "#E5D3AF",
+            "border-sand": "#D8C59D",
+            "dark-border": "#3A2E33",
+            "slate-chip": "#AEC4D4",
+            "slate-chip-bg": "#EBF2F7",
+            "dark-slate-chip-bg": "#1D2830",
+            "text-main": "#231B1C",
+            "text-muted": "#695D56",
+            "dark-text": "#F5EFE1",
+            "dark-text-muted": "#C7BCA7",
+            "success": "#1E7E34",
+            "error": "#BA1A1A"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom track styling for high precision slider */
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 9999px;
+      background: #790D16;
+      border: 3px solid #F5EFE1;
+      box-shadow: 0 2px 6px rgba(121, 13, 22, 0.45);
+      cursor: pointer;
+    }
+    input[type=range]::-moz-range-thumb {
+      height: 20px;
+      width: 20px;
+      border-radius: 9999px;
+      background: #790D16;
+      border: 3px solid #F5EFE1;
+      box-shadow: 0 2px 6px rgba(121, 13, 22, 0.45);
+      cursor: pointer;
+    }
+    .dark input[type=range]::-webkit-slider-thumb {
+      background: #A01B26;
+      border-color: #231B1E;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    }
+    .dark input[type=range]::-moz-range-thumb {
+      background: #A01B26;
+      border-color: #231B1E;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background dark:bg-dark-bg text-text-main dark:text-dark-text antialiased font-body-md transition-colors duration-200 pb-24 selection:bg-surface-sand selection:text-primary">
+<!-- TOP APP BAR -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin h-14 bg-background/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-border-sand/40 dark:border-dark-border shadow-sm transition-colors duration-200">
+<!-- Location Switcher (Leading) -->
+<div class="flex items-center gap-1.5 cursor-pointer active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-primary dark:text-[#E85D67] text-[22px]" data-icon="location_on">location_on</span>
+<div class="flex items-center">
+<span class="font-bold text-[14px] text-text-main dark:text-dark-text tracking-tight truncate max-w-[155px]">BMSIT, Avalahalli</span>
+<span class="material-symbols-outlined text-text-muted dark:text-dark-text-muted text-[18px] ml-0.5" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+<!-- Actions: Dark Mode toggle + Language switch + Notifications -->
+<div class="flex items-center gap-2">
+<!-- Dark Mode Toggle Button -->
+<button aria-label="Toggle Dark Mode" class="p-1.5 rounded-full bg-surface-sand/50 dark:bg-dark-card border border-border-sand/60 dark:border-dark-border text-text-main dark:text-dark-text hover:bg-surface-sand transition-all flex items-center justify-center active:scale-90" id="themeToggle">
+<span class="material-symbols-outlined text-[19px] dark:hidden text-primary" data-icon="dark_mode">dark_mode</span>
+<span class="material-symbols-outlined text-[19px] hidden dark:inline text-surface-sand" data-icon="light_mode">light_mode</span>
+</button>
+<!-- Language Switcher -->
+<button class="bg-surface-sand/50 dark:bg-dark-card border border-border-sand/60 dark:border-dark-border px-2.5 py-1 rounded-full text-[12px] font-bold text-text-main dark:text-dark-text hover:bg-surface-sand transition-colors">
+        EN | KN
+      </button>
+<!-- Notification Button -->
+<button class="relative p-1.5 rounded-full hover:bg-surface-sand/40 dark:hover:bg-dark-card transition-colors text-text-main dark:text-dark-text">
+<span class="material-symbols-outlined text-[23px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-primary dark:bg-[#FF4D5E] rounded-full ring-2 ring-background dark:ring-dark-bg"></span>
+</button>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="pt-16 max-w-md mx-auto px-margin space-y-4">
+<!-- CONSUMER / BUSINESS MODE TOGGLE -->
+<div class="bg-surface-sand/40 dark:bg-dark-card rounded-full p-1 flex items-center border border-border-sand/70 dark:border-dark-border shadow-inner">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-primary text-[#FFFFFF] text-[12px] font-bold shadow flex items-center justify-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="explore">explore</span>Consumer (Explore)
+  </button>
+<button class="flex-1 py-1.5 px-3 rounded-full text-text-muted dark:text-dark-text-muted hover:text-text-main dark:hover:text-dark-text text-[12px] font-semibold flex items-center justify-center gap-1.5 transition-all hover:bg-surface-sand/50 dark:hover:bg-white/5">
+<span class="material-symbols-outlined text-[16px] text-primary dark:text-[#E85D67]" data-icon="storefront">storefront</span>Business (Post)
+  </button>
+</div>
+<!-- NATURAL LANGUAGE SEARCH BAR -->
+<section class="pt-0.5">
+<div class="relative flex items-center bg-surface-card dark:bg-dark-card rounded-full shadow-sm border border-border-sand dark:border-dark-border px-3.5 py-2.5 transition-all focus-within:ring-2 focus-within:ring-primary">
+<span class="material-symbols-outlined text-primary dark:text-[#E85D67] text-[20px] mr-2" data-icon="search">search</span>
+<input class="w-full bg-transparent border-0 p-0 text-[14px] placeholder:text-text-muted/60 dark:placeholder:text-dark-text-muted/50 focus:ring-0 text-text-main dark:text-dark-text outline-none" placeholder="Search &quot;quiet cafe under ₹300&quot;, badminton..." type="text">
+<button class="p-1 rounded-full text-text-muted dark:text-dark-text-muted hover:text-primary dark:hover:text-slate-chip transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="mic">mic</span>
+</button>
+</div>
+</section>
+<!-- HYPERLOCAL CONTROLS: RADIUS SLIDER CARD -->
+<section class="bg-surface-card dark:bg-dark-card rounded-lg p-3.5 border border-border-sand/80 dark:border-dark-border shadow-sm transition-colors duration-200">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary dark:text-[#E85D67] text-[18px]" data-icon="radar">radar</span>
+<span class="text-[13px] font-bold text-text-main dark:text-dark-text">Discovery Radius: <span class="text-primary dark:text-surface-sand font-extrabold">2.5 km</span></span>
+</div>
+<span class="inline-flex items-center gap-1 bg-slate-chip-bg dark:bg-dark-slate-chip-bg text-text-main dark:text-slate-chip border border-slate-chip/40 text-[11px] font-bold px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary dark:bg-slate-chip animate-pulse"></span> 340+ active around BMSIT
+</span>
+</div>
+<!-- Slider Component -->
+<div class="px-1 py-1">
+<input class="w-full h-1.5 bg-surface-sand/60 dark:bg-dark-bg rounded-lg appearance-none cursor-pointer accent-primary" max="25000" min="500" step="250" type="range" value="2500">
+<div class="flex justify-between items-center text-[11px] text-text-muted dark:text-dark-text-muted mt-1.5">
+<span class="">500m (Walkable)</span>
+<span class="font-bold text-text-main dark:text-dark-text">2.5 km (Hyperlocal)</span>
+<span class="">25 km (City)</span>
+</div>
+</div>
+</section>
+<!-- QUICK FILTER CHIPS (Horizontal Scroll) -->
+<section class="-mx-margin px-margin">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="flex-shrink-0 bg-primary text-white px-3.5 py-1.5 rounded-full text-[12px] font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1">
+    ☕ Cafes &amp; Bites
+  </button>
+<button class="flex-shrink-0 bg-surface-card dark:bg-dark-card border border-border-sand dark:border-dark-border text-text-main dark:text-dark-text px-3 py-1.5 rounded-full text-[12px] font-semibold active:scale-95 transition-transform hover:bg-surface-sand/40 flex items-center gap-1">
+    🏸 Badminton Courts
+  </button>
+<button class="flex-shrink-0 bg-surface-card dark:bg-dark-card border border-border-sand dark:border-dark-border text-text-main dark:text-dark-text px-3 py-1.5 rounded-full text-[12px] font-semibold active:scale-95 transition-transform hover:bg-surface-sand/40 flex items-center gap-1">
+    🌊 Lakes &amp; Hangouts
+  </button>
+<button class="flex-shrink-0 bg-surface-card dark:bg-dark-card border border-border-sand dark:border-dark-border text-text-main dark:text-dark-text px-3 py-1.5 rounded-full text-[12px] font-semibold active:scale-95 transition-transform hover:bg-surface-sand/40 flex items-center gap-1">
+    🛒 Marts &amp; Malls
+  </button>
+<button class="flex-shrink-0 bg-surface-card dark:bg-dark-card border border-border-sand dark:border-dark-border text-text-main dark:text-dark-text px-3 py-1.5 rounded-full text-[12px] font-semibold active:scale-95 transition-transform hover:bg-surface-sand/40 flex items-center gap-1">
+    📍 Study Spots
+  </button>
+</div>
+</section>
+<!-- FEED CONTAINER -->
+<div class="space-y-4 pt-1">
+<!-- BUSINESS OWNER CALLOUT CARD -->
+<div class="bg-gradient-to-r from-surface-sand/60 via-surface-card to-slate-chip-bg/50 dark:from-dark-card dark:via-dark-card dark:to-[#1C242B] rounded-lg p-3.5 border border-primary/30 dark:border-primary/40 shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]" data-icon="add_business">add_business</span>
+</div>
+<div class="flex-1 space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold text-primary dark:text-[#E85D67] uppercase tracking-wider">For Local Merchants &amp; Creators</span>
+<span class="bg-slate-chip/25 dark:bg-dark-slate-chip-bg text-text-main dark:text-slate-chip border border-slate-chip/40 text-[10px] font-bold px-1.5 py-0.5 rounded-full">Avalahalli Hub</span>
+</div>
+<p class="text-[13px] text-text-main dark:text-dark-text font-medium leading-snug">
+      Own a cafe, badminton arena, or store near BMSIT? Reach 2,400+ local students and Avalahalli residents today.
+    </p>
+<button class="mt-1 bg-primary hover:bg-primary-hover text-white px-3.5 py-1.5 rounded-lg text-[12px] font-bold flex items-center gap-1 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="campaign">campaign</span>
+      Post My Business / Offer
+    </button>
+</div>
+</div>
+<!-- CARD 1: CAFE NEAR BMSIT -->
+<article class="bg-surface-card dark:bg-dark-card rounded-lg border border-border-sand dark:border-dark-border shadow-sm overflow-hidden transition-colors duration-200">
+<div class="relative h-44 w-full bg-surface-sand/30 dark:bg-dark-bg">
+<img class="w-full h-full object-cover" data-alt="Warm modern cafe interior with student study tables, laptop friendly sockets, steaming artisanal chai and filter coffee opposite BMSIT campus, Avalahalli" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf2AIoRNrh7266CQXcOunxK7Ru5gltnw0P2JJWGtYfysz3x8M_8KqpMijcwZyhf-qXHCtsEpQAMFdlGfWnXPaGcoBC7GSd1LRtdIdJUorn8roPVrtHttzmYToCFsvSDHkNcFUItwZ1zoRLF_lVwZXjgLt2-6h4d05sLm9NTypZGYToIlnHNvszM2Baa4s2cZ1T4biW4WPxfMAc0cQY_l9C1fOQPsh2H1Xb70oWicZfqiaW8z5A-rHIYw">
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="bg-[#F5EFE1]/90 dark:bg-[#161214]/90 backdrop-blur-sm text-text-main dark:text-dark-text text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm border border-border-sand/40 dark:border-dark-border">
+        Student Chill &amp; Cafe
+      </span>
+<span class="bg-[#F5EFE1]/90 dark:bg-[#161214]/90 backdrop-blur-sm text-text-muted dark:text-dark-text-muted text-[11px] font-semibold px-2 py-1 rounded-full shadow-sm border border-border-sand/40 dark:border-dark-border">
+        ₹ (Avg ₹120)
+      </span>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#F5EFE1]/90 dark:bg-[#161214]/90 backdrop-blur-sm flex items-center justify-center text-primary dark:text-[#E85D67] active:scale-90 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="p-4 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-[17px] font-bold text-text-main dark:text-dark-text">The Chai &amp; Code Cafe</h2>
+<p class="text-[12px] text-text-muted dark:text-dark-text-muted flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary dark:text-[#E85D67]" data-icon="near_me">near_me</span>
+          Opp. BMSIT Main Gate • 150m away
+        </p>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1 bg-surface-sand/40 dark:bg-dark-bg text-primary dark:text-surface-sand border border-border-sand dark:border-dark-border px-2 py-0.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary dark:text-[#E85D67]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[13px] font-bold text-primary dark:text-surface-sand">94</span>
+<span class="text-[11px] text-text-muted dark:text-dark-text-muted">/100</span>
+</div>
+<span class="text-[10px] text-primary dark:text-dark-text-muted font-bold tracking-tight mt-0.5">Trust Score</span>
+</div>
+</div>
+<div class="bg-surface-sand/20 dark:bg-dark-bg/60 p-2.5 rounded-lg border border-border-sand/70 dark:border-dark-border space-y-1.5">
+<div class="text-[11px] font-bold text-text-muted dark:text-dark-text-muted uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-slate-chip" data-icon="shield">shield</span>
+        Verified Campus Trust Index
+      </div>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-card dark:bg-dark-card text-text-main dark:text-dark-text text-[11px] font-medium px-2 py-0.5 rounded border border-border-sand/60 dark:border-dark-border">
+          ✓ 520+ BMSIT Student Visits
+        </span>
+<span class="bg-surface-card dark:bg-dark-card text-text-main dark:text-dark-text text-[11px] font-medium px-2 py-0.5 rounded border border-border-sand/60 dark:border-dark-border">
+          ⚡ High-Speed Wi-Fi (150 Mbps)
+        </span>
+<span class="bg-surface-card dark:bg-dark-card text-primary dark:text-surface-sand text-[11px] font-bold px-2 py-0.5 rounded border border-border-sand/60 dark:border-dark-border">
+          🎓 15% BMSIT ID Discount
+        </span>
+<span class="bg-surface-card dark:bg-dark-card text-text-main dark:text-dark-text text-[11px] font-medium px-2 py-0.5 rounded border border-border-sand/60 dark:border-dark-border">
+          ⚡ Charging Ports at Every Table
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-[12px] text-text-muted dark:text-dark-text-muted">
+<span class="material-symbols-outlined text-[16px] text-slate-chip" data-icon="info">info</span>
+<span>Why am I seeing this? <strong class="font-semibold text-text-main dark:text-dark-text">150m from BMSIT Main Gate</strong></span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-primary hover:bg-primary-hover text-white py-2.5 rounded-lg font-bold text-[13px] flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]" data-icon="restaurant_menu">restaurant_menu</span>
+        Quick Order / Menu
+      </button>
+<button class="bg-surface-sand/40 dark:bg-dark-bg border border-border-sand dark:border-dark-border text-text-main dark:text-dark-text py-2.5 rounded-lg font-bold text-[13px] flex items-center justify-center gap-1.5 active:scale-95 transition-transform hover:bg-surface-sand/60">
+<span class="material-symbols-outlined text-[18px] text-primary dark:text-slate-chip" data-icon="directions">directions</span>
+        Directions (2 min)
+      </button>
+</div>
+</div>
+</article>
+<!-- CARD 2: BADMINTON ARENA -->
+<article class="bg-surface-card dark:bg-dark-card rounded-lg border border-border-sand dark:border-dark-border shadow-sm p-4 space-y-3 transition-colors duration-200">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-slate-chip/25 dark:bg-dark-slate-chip-bg text-text-main dark:text-slate-chip border border-slate-chip/40 text-[11px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+        🏸 Sports &amp; Fitness
+      </span>
+<span class="text-[12px] text-text-muted dark:text-dark-text-muted flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+        Avalahalli Main Road
+      </span>
+</div>
+<span class="text-[12px] text-text-muted dark:text-dark-text-muted font-medium">800m away</span>
+</div>
+<div class="flex gap-3 items-center">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-slate-chip-bg dark:bg-dark-slate-chip-bg border border-slate-chip/30 flex items-center justify-center text-primary dark:text-slate-chip">
+<span class="material-symbols-outlined text-[36px]" data-icon="sports_tennis">sports_tennis</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<h3 class="text-[16px] font-bold text-text-main dark:text-dark-text leading-snug">
+          SmashZone Badminton Arena
+        </h3>
+<span class="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 text-[10px] font-bold px-1.5 py-0.5 rounded-full">4 Courts Open</span>
+</div>
+<p class="text-[12px] text-text-muted dark:text-dark-text-muted">
+        BWF standard synthetic wooden courts • Non-marking shoes for rent
+      </p>
+<p class="text-[13px] text-primary dark:text-surface-sand font-bold">
+        ₹250/hr <span class="text-text-muted dark:text-dark-text-muted font-normal text-[11px]">(Slots open 5 PM - 10 PM today)</span>
+</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-1 border-t border-border-sand/40 dark:border-dark-border">
+<span class="text-[11px] text-text-muted dark:text-dark-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-emerald-600 dark:text-emerald-400" data-icon="schedule">schedule</span>
+      Open till 11:00 PM
+    </span>
+<button class="bg-primary hover:bg-primary-hover text-white px-4 py-1.5 rounded-lg text-[13px] font-bold active:scale-95 transition-transform shadow-sm">
+      Book Court Slot
+    </button>
+</div>
+</article>
+<!-- CARD 3: NATURE / LAKE HANGOUT -->
+<article class="bg-surface-card dark:bg-dark-card rounded-lg border border-border-sand dark:border-dark-border shadow-sm overflow-hidden transition-colors duration-200">
+<div class="relative h-36 w-full bg-surface-sand/30 dark:bg-dark-bg">
+<img class="w-full h-full object-cover" data-alt="Serene Avalahalli lake with tree-lined paved walking path, peaceful water reflection at golden hour and migratory birds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgRRwC562psGgVW6S3ngQSqfsILPKlwLRrygjLEEZXKY6iBDH5gk_3n-mUgtMH1-GTt6dOKi-HqYvor5IAUDN-Zlf7aF105H_4FxmqveN6zncWt_5srX0FK5rXd47tyHzIGVszwwwZnObJlbLnGVLpXmehIWkhXFGTgMJEg3zo5U714_0ieQMh205Lndq_me1Iqc8ODq4ufMc4KGGgJDQMRfalsVxtD1Jll-UiaWBrKAdUF4qKHtcr2Q">
+<div class="absolute top-3 left-3 bg-primary text-white font-bold text-[11px] px-2.5 py-1 rounded-full shadow-md">
+      🌊 Avalahalli Lake
+    </div>
+<div class="absolute bottom-3 left-3 bg-[#F5EFE1]/90 dark:bg-[#161214]/90 backdrop-blur-sm text-text-main dark:text-dark-text text-[11px] px-2.5 py-0.5 rounded-full font-bold border border-border-sand/40 dark:border-dark-border">
+      Free Entry • Open till 6:30 PM
+    </div>
+</div>
+<div class="p-4 space-y-3">
+<div>
+<h3 class="text-[17px] font-bold text-text-main dark:text-dark-text">
+        Avalahalli Lake Bird Sanctuary &amp; Walking Trail
+      </h3>
+<p class="text-[12px] text-text-muted dark:text-dark-text-muted flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary dark:text-[#E85D67]" data-icon="park">park</span>
+        Near Singanayakanahalli Road (1.2 km from BMSIT)
+      </p>
+</div>
+<p class="text-[13px] text-text-muted dark:text-dark-text-muted leading-relaxed">
+      Paved 2.8 km running &amp; sunset trail, bird-watching gazebos, peaceful seating benches away from highway noise.
+    </p>
+<div class="flex items-center gap-2 text-[12px] text-text-muted dark:text-dark-text-muted">
+<span class="material-symbols-outlined text-[16px] text-slate-chip" data-icon="nature_people">nature_people</span>
+<span class="text-text-main dark:text-dark-text font-medium">Popular for evening college walks &amp; photography</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-surface-sand/40 dark:bg-dark-bg border border-border-sand dark:border-dark-border text-text-main dark:text-dark-text py-2 rounded-lg text-[13px] font-bold active:scale-95 transition-transform flex items-center justify-center gap-1 hover:bg-surface-sand/60">
+<span class="material-symbols-outlined text-[18px] text-primary dark:text-slate-chip" data-icon="navigation">navigation</span>
+        Get Walking Route
+      </button>
+<button class="bg-primary hover:bg-primary-hover text-white py-2 rounded-lg text-[13px] font-bold flex items-center justify-center gap-1.5 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="group_add">group_add</span>
+        Plan Group Walk
+      </button>
+</div>
+</div>
+</article>
+<!-- CARD 4: SHOPPING / MARTS CARD -->
+<article class="bg-surface-card dark:bg-dark-card rounded-lg border border-border-sand dark:border-dark-border shadow-sm p-4 space-y-3 transition-colors duration-200">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-surface-sand text-text-main dark:bg-[#34282B] dark:text-surface-sand border border-border-sand dark:border-dark-border text-[11px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+        🛒 Shopping &amp; Mart
+      </span>
+<span class="text-[12px] text-text-muted dark:text-dark-text-muted flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="store">store</span>
+        Yelahanka New Town
+      </span>
+</div>
+<span class="text-[12px] text-text-muted dark:text-dark-text-muted font-medium">2.4 km away</span>
+</div>
+<div class="flex gap-3 items-center">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-sand/40 dark:bg-dark-bg border border-border-sand/60 dark:border-dark-border flex items-center justify-center text-primary dark:text-surface-sand">
+<span class="material-symbols-outlined text-[36px]" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-[16px] font-bold text-text-main dark:text-dark-text leading-snug">
+        RMZ Galleria Mall &amp; Supermart
+      </h3>
+<p class="text-[12px] text-text-muted dark:text-dark-text-muted">
+        INOX multiplex, Food Court, Star Bazaar &amp; stationery essentials for students
+      </p>
+<p class="text-[12px] text-emerald-700 dark:text-emerald-400 font-semibold">
+        Open daily 10:00 AM – 10:00 PM
+      </p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-1 border-t border-border-sand/40 dark:border-dark-border">
+<span class="text-[11px] text-text-muted dark:text-dark-text-muted">Direct bus connection from BMSIT</span>
+<button class="bg-primary hover:bg-primary-hover text-white px-4 py-1.5 rounded-lg text-[13px] font-bold active:scale-95 transition-transform shadow-sm">
+      Explore Stores
+    </button>
+</div>
+</article>
+</div>
+</main>
+<!-- DOCKED BOTTOM NAVBAR -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs pb-safe h-16 bg-surface-card/95 dark:bg-dark-card/95 backdrop-blur-md border-t border-border-sand dark:border-dark-border shadow-lg transition-colors duration-200">
+<!-- Destination 1: Feed (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary text-white rounded-full px-3.5 py-1 active:scale-95 transition-transform duration-150 shadow-sm" href="#feed">
+<span class="material-symbols-outlined text-[20px]" data-icon="dynamic_feed" style="font-variation-settings: 'FILL' 1;">dynamic_feed</span>
+<span class="text-[11px] font-bold">Feed</span>
+</a>
+<!-- Destination 2: Discover -->
+<a class="flex flex-col items-center justify-center text-text-muted dark:text-dark-text-muted px-3 py-1 hover:text-text-main dark:hover:text-dark-text active:scale-95 transition-transform duration-150" href="#discover">
+<span class="material-symbols-outlined text-[21px]" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium">Discover</span>
+</a>
+<!-- Destination 3: Post -->
+<a class="flex flex-col items-center justify-center text-text-muted dark:text-dark-text-muted px-3 py-1 hover:text-text-main dark:hover:text-dark-text active:scale-95 transition-transform duration-150" href="#post">
+<span class="material-symbols-outlined text-[24px] text-primary dark:text-[#E85D67]" data-icon="add_circle">add_circle</span>
+<span class="text-[11px] font-bold text-primary dark:text-[#E85D67]">Post</span>
+</a>
+<!-- Destination 4: Saved -->
+<a class="flex flex-col items-center justify-center text-text-muted dark:text-dark-text-muted px-3 py-1 hover:text-text-main dark:hover:text-dark-text active:scale-95 transition-transform duration-150" href="#saved">
+<span class="material-symbols-outlined text-[21px]" data-icon="bookmark">bookmark</span>
+<span class="text-[11px] font-medium">Saved</span>
+</a>
+<!-- Destination 5: Profile -->
+<a class="flex flex-col items-center justify-center text-text-muted dark:text-dark-text-muted px-3 py-1 hover:text-text-main dark:hover:text-dark-text active:scale-95 transition-transform duration-150" href="#profile">
+<span class="material-symbols-outlined text-[21px]" data-icon="person">person</span>
+<span class="text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Functional Interactions -->
+<script>
+  // Dynamic radius slider readout
+  const slider = document.querySelector('input[type="range"]');
+  if (slider) {
+    slider.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      let formatted = val >= 1000 ? (val / 1000).toFixed(1) + ' km' : val + ' m';
+      const label = document.querySelector('section span.text-primary.font-extrabold, section span.text-primary.font-bold');
+      if (label) label.innerText = formatted;
+    });
+  }
+
+  // Functional Theme Toggle (Light / Dark Mode)
+  const themeToggle = document.getElementById('themeToggle');
+  const htmlRoot = document.documentElement;
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      if (htmlRoot.classList.contains('dark')) {
+        htmlRoot.classList.remove('dark');
+        htmlRoot.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlRoot.classList.remove('light');
+        htmlRoot.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
+</script>
+</body></html>
