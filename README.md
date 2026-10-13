@@ -1,4 +1,4 @@
-# LocalLoop — Stitch prototype
+# LocalLoop — prototype
 
 ## Run it
 
